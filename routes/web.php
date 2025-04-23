@@ -22,3 +22,7 @@ Route::get('/terms-condition', [PagesController::class, 'termsCondition'])->name
 Route::get('/privacy-policy', [PagesController::class, 'privacyPolicy'])->name('privacy-policy');
 
 Route::post('/send-mail', [SendMailController::class, 'sendMail'])->name('send.mail');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
