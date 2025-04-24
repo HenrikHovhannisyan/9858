@@ -18,6 +18,5 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('/send-mail', [SendMailController::class, 'sendMail'])->name('send.mail');
 
 Auth::routes();
