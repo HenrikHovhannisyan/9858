@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 ul {
@@ -11,6 +18,10 @@ ul {
 
 a {
     text-decoration: none !important;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .container-fluid {
@@ -28,6 +39,13 @@ a {
     color: #4a4458 !important;
 }
 
+.btn_dark {
+    background-color: #4a4458;
+    padding: 10px 24px !important;
+    border-radius: 4px;
+    color: #f6edff !important;
+}
+
 nav {
     background-color: #141218;
 }
@@ -41,6 +59,14 @@ nav a {
     letter-spacing: 0.1px;
     text-align: center;
     vertical-align: middle;
+}
+
+.navbar-toggler {
+    border-color: #f6edff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28246, 237, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 footer {
@@ -113,6 +139,7 @@ footer a {
     vertical-align: middle;
     padding: 10px;
     width: 100%;
+    border-radius: 4px;
 }
 
 .btn_auth:hover {
@@ -146,11 +173,374 @@ footer a {
     vertical-align: middle;
 }
 
+#banner {
+    background-color: #000000;
+}
+
+#index_banner {
+    background-image: url("../img/banner/index.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 245px 15px;
+}
+
+.banner_container {
+    max-width: 895px;
+    margin: auto;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.banner_title {
+    color: #ffffff;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.banner_text {
+    color: #ffffff;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#who_we_are {
+    background-color: #e8e8e8;
+    margin-bottom: 200px;
+}
+
+.who_we_are_right {
+    padding: 15px 0;
+}
+
+.who_we_are_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+}
+
+.who_we_are_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    margin-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#our_signature_services {
+    margin-bottom: 200px;
+}
+
+.services_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.services_item {
+    border: #0000000f 1px solid;
+    padding: 24px;
+}
+
+.services_item_title {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.services_item_text {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+#why_clients_trust_us {
+    margin-bottom: 200px;
+}
+
+.services_item_shadow {
+    box-shadow: 0px 1px 2px 0px #0000004d;
+    padding: 24px;
+    border-radius: 4px;
+    max-width: 316px;
+}
+
+.services_item_shadow_title {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.services_item_shadow_text {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.shadow-effect {
+    background: #fff;
+    padding: 40px 80px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #ececec;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.02);
+}
+
+@media screen and (max-width: 768px) {
+    .shadow-effect {
+        padding: 30px 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .shadow-effect {
+        padding: 20px 25px;
+    }
+}
+
+#customers-testimonials .shadow-effect p {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#customers-testimonials .shadow-effect .item_name {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+#customers-testimonials .shadow-effect .position {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#customers-testimonials .item {
+    text-align: center;
+    opacity: 0.2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+@media screen and (max-width: 576px) {
+    #customers-testimonials .item {
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+        transform: scale3d(0.9, 0.9, 1);
+    }
+}
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 80px;
+    border-radius: 100%;
+    margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #373737;
+    border-radius: 100%;
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+    width: 15px;
+    height: 15px;
+}
+#customers-testimonials.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    background: #e6e0e9;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 2px 5px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+}
+
+#dress {
+    background-color: #ececec;
+    padding: 44px 0;
+}
+
+.dress_title {
+    color: #141218;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.dress_text {
+    color: #141218;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.dress_right > .links {
+    color: #4a4458;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+}
+
 /*=============== BREAKPOINTS ===============*/
+@media (max-width: 1200px) {
+    .banner_title {
+        font-size: 54px;
+        line-height: 76px;
+    }
+
+    .who_we_are_title,
+    .services_title {
+        font-size: 54px;
+        line-height: 76px;
+    }
+
+    #who_we_are,
+    #our_signature_services,
+    #why_clients_trust_us {
+        margin-bottom: 120px;
+    }
+}
 /* For large devices */
 @media screen and (max-width: 992px) {
     footer {
         padding: 40px 0;
+    }
+
+    .banner_title {
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    .banner_text {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    #index_banner {
+        padding: 180px 15px;
+    }
+
+    .sign_form > h2 {
+        font-size: 36px;
+        line-height: 54px;
+    }
+
+    .banner_title {
+        font-size: 44px;
+        line-height: 66px;
+    }
+
+    .services_item_shadow {
+        margin: 0 auto 20px;
+    }
+
+    .who_we_are_right {
+        padding: 20px 15px;
+    }
+
+    #customers-testimonials .owl-item {
+        padding: 0 10px;
+    }
+
+    .dress_title,
+    .dress_text {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .banner_text {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    #index_banner {
+        padding: 180px 15px;
+    }
+
+    .who_we_are_title,
+    .services_title {
+        font-size: 44px;
+        line-height: 66px;
+    }
+
+    .who_we_are_right {
+        padding: 30px 15px;
+    }
+
+    .shadow-effect {
+        padding: 30px 60px;
     }
 }
 
@@ -159,11 +549,343 @@ footer a {
     footer {
         padding: 20px 0;
     }
+
+    .banner_title {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .banner_text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #index_banner {
+        padding: 120px 15px;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .privacy_policy_text {
+        padding-top: 60px;
+    }
+
+    footer .col-lg-4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    footer .justify-content-lg-center,
+    footer .justify-content-lg-end {
+        justify-content: center !important;
+    }
+
+    .banner_title {
+        font-size: 36px;
+        line-height: 54px;
+    }
+
+    .banner_text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #index_banner {
+        padding: 120px 15px;
+    }
+
+    .who_we_are_title,
+    .services_title {
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+    }
+
+    .services_item {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #customers-testimonials .shadow-effect p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    #customers-testimonials .shadow-effect .item_name {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    #customers-testimonials .shadow-effect .position {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .who_we_are_text {
+        text-align: center;
+    }
+
+    .who_we_are_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 15px;
+    }
+
+    #who_we_are,
+    #our_signature_services,
+    #why_clients_trust_us {
+        margin-bottom: 80px;
+    }
+
+    .services_item {
+        margin-bottom: 15px;
+    }
+
+    footer {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    footer .col-lg-4 {
+        margin-bottom: 30px;
+        justify-content: center !important;
+    }
+
+    .dress_right {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .dress_right .links {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    nav .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .banner_title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .banner_text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #index_banner {
+        padding: 80px 15px;
+    }
+
+    .sign_form > h2 {
+        font-size: 32px;
+        line-height: 48px;
+        padding-top: 15px;
+    }
+
+    .sign_form > p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .privacy_policy_text {
+        padding-top: 40px;
+    }
+
+    .privacy_policy_text > p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    .navbar-nav .btn_dark,
+    .navbar-nav .btn_white {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .sign_form {
+        padding: 15px !important;
+    }
+
+    .row.mb-3 {
+        margin-bottom: 10px !important;
+    }
+
+    .banner_title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .banner_text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    #index_banner {
+        padding: 100px 15px;
+    }
+
+    .who_we_are_title,
+    .services_title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .btn_white,
+    .btn_dark {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .services_item_shadow {
+        max-width: 100%;
+    }
+
+    .sign_form input,
+    .sign_form select,
+    .sign_form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn_auth {
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-brand {
+        max-width: 70%;
+    }
+
+    .services_item {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
 /* For small devices */
+@media screen and (max-width: 400px) {
+    .banner_title {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .banner_text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #index_banner {
+        padding: 60px 15px;
+    }
+
+    .btn_white,
+    .btn_dark {
+        padding: 8px 16px !important;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .sign_form input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .services_item {
+        padding: 15px;
+    }
+
+    .services_item_title,
+    .services_item_shadow_title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .services_item_text,
+    .services_item_shadow_text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .who_we_are_text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .dress_title,
+    .dress_text {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    .navbar-brand img {
+        max-width: 120px;
+    }
+
+    .shadow-effect {
+        padding: 15px 20px;
+    }
+}
+
+/* For extra small devices */
 @media screen and (max-width: 350px) {
+    .banner_title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .banner_text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #index_banner {
+        padding: 50px 10px;
+    }
+
+    .btn_white,
+    .btn_dark {
+        padding: 6px 12px !important;
+        font-size: 13px;
+    }
+
+    .sign_form input {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
 }

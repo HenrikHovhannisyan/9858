@@ -32,7 +32,7 @@
                     @guest
                     @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link btn_dark" href="{{ route('login') }}">{{ __('Log in') }}</a>
+                        <a class="nav-link btn_dark bg-transparent" href="{{ route('login') }}">{{ __('Log in') }}</a>
                     </li>
                     @endif
 
