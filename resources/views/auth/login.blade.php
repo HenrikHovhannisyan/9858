@@ -74,7 +74,7 @@
                 </form>
                 @if (Route::has('password.request'))
                 <a class="btn btn-light w-100 mt-2" href="{{ route('password.request') }}">
-                    Forgot Your Password?
+                    Forgot Password
                 </a>
                 @endif
                 <a href="{{ route('register') }}" class="btn btn-light w-100 mt-2">
