@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/luxury-delivery', [PagesController::class, 'luxury_delivery'])->name('luxury_delivery');
 
 
 Auth::routes();

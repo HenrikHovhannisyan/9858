@@ -9,11 +9,7 @@
 img {
     max-width: 100%;
     height: auto;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+    display: block;
 }
 
 a {
@@ -28,10 +24,6 @@ p {
     max-width: 1928px;
 }
 
-.btn_dark {
-    padding: 10px 24px !important;
-}
-
 .btn_white {
     background-color: #f6edff;
     padding: 10px 24px !important;
@@ -44,6 +36,35 @@ p {
     padding: 10px 24px !important;
     border-radius: 4px;
     color: #f6edff !important;
+}
+
+.btn_dark:hover {
+    background-color: #373341;
+    color: #f6edff !important;
+}
+
+.btn_dark_border {
+    background-color: transparent;
+    border-radius: 4px;
+    color: #4a4458 !important;
+    border: #4a4458 1px solid;
+}
+
+.btn_dark_border:hover {
+    background-color: #4a4458;
+    color: #f6edff !important;
+}
+
+.btn_white_border {
+    background-color: transparent;
+    border-radius: 4px;
+    color: #f6edff !important;
+    border: #f6edff 1px solid;
+}
+
+.btn_white_border:hover {
+    background-color: #4a4458;
+    border-color: #4a4458;
 }
 
 nav {
@@ -81,6 +102,11 @@ footer a {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1px;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .sign_form > .back {
@@ -328,6 +354,19 @@ footer a {
     .shadow-effect {
         padding: 20px 25px;
     }
+
+    #customers-testimonials.owl-carousel .owl-dots {
+        margin-top: 20px;
+    }
+
+    #customers-testimonials .item {
+        transform: scale3d(0.95, 0.95, 1);
+    }
+
+    .owl-carousel .owl-item img {
+        max-width: 65px;
+        margin-bottom: 10px;
+    }
 }
 
 #customers-testimonials .shadow-effect p {
@@ -379,6 +418,24 @@ footer a {
     #customers-testimonials .item {
         -webkit-transform: scale3d(0.9, 0.9, 1);
         transform: scale3d(0.9, 0.9, 1);
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .banner_container {
+        padding: 0 10px;
+    }
+
+    #luxury_delivery_banner,
+    #bottom_banner_bg {
+        padding: 60px 15px;
+    }
+
+    #dress {
+        padding: 30px 0;
     }
 }
 .owl-carousel .owl-item img {
@@ -453,6 +510,136 @@ footer a {
     vertical-align: middle;
 }
 
+#luxury_delivery_banner {
+    background-image: url("../img/banner/luxury_delivery.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 245px 15px;
+}
+
+#deserve {
+    background-color: #e8e8e8;
+    margin-bottom: 200px;
+    padding: 160px 0;
+}
+
+#deserve_container {
+    max-width: 895px;
+    text-align: center;
+}
+
+.deserve_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.deserve_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#promise {
+    margin-bottom: 200px;
+}
+
+.promise_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.promise_text {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.promis_box {
+    max-width: 550px;
+    padding: 16px 24px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+    border-image-slice: 1;
+}
+
+.promis_box_title {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.experience_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.experience_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-bottom: 24px;
+}
+
+.experience_description {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.works_item_shadow {
+    box-shadow: 0px 1px 2px 0px #0000004d;
+    padding: 24px;
+    border-radius: 4px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+#bottom_banner_bg {
+    background-image: url("../img/banner/bottom_banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 15px;
+    color: #000000;
+}
+
 /*=============== BREAKPOINTS ===============*/
 @media (max-width: 1200px) {
     .banner_title {
@@ -461,15 +648,38 @@ footer a {
     }
 
     .who_we_are_title,
-    .services_title {
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title {
         font-size: 54px;
         line-height: 76px;
     }
 
     #who_we_are,
     #our_signature_services,
-    #why_clients_trust_us {
+    #why_clients_trust_us,
+    #promise {
         margin-bottom: 120px;
+    }
+
+    .promis_box {
+        max-width: 500px;
+    }
+
+    .services_item_shadow,
+    .works_item_shadow {
+        margin-bottom: 25px;
+    }
+
+    #deserve {
+        padding: 120px 0;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 /* For large devices */
@@ -547,7 +757,7 @@ footer a {
 /* For medium devices */
 @media screen and (max-width: 768px) {
     footer {
-        padding: 20px 0;
+        padding: 30px 0;
     }
 
     .banner_title {
@@ -601,7 +811,10 @@ footer a {
     }
 
     .who_we_are_title,
-    .services_title {
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title {
         font-size: 36px;
         line-height: 54px;
         text-align: center;
@@ -629,8 +842,14 @@ footer a {
         line-height: 24px;
     }
 
-    .who_we_are_text {
+    .who_we_are_text,
+    .deserve_text,
+    .promise_text,
+    .experience_text,
+    .experience_description {
         text-align: center;
+        font-size: 15px;
+        line-height: 26px;
     }
 
     .who_we_are_right {
@@ -642,7 +861,8 @@ footer a {
 
     #who_we_are,
     #our_signature_services,
-    #why_clients_trust_us {
+    #why_clients_trust_us,
+    #promise {
         margin-bottom: 80px;
     }
 
@@ -673,6 +893,57 @@ footer a {
     nav .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .promis_box {
+        max-width: 100%;
+        margin: 30px auto 20px;
+    }
+
+    .services_item_shadow,
+    .works_item_shadow {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #deserve {
+        padding: 100px 0;
+    }
+
+    .owl-carousel .owl-item img {
+        max-width: 70px;
+        margin-bottom: 12px;
+    }
+
+    .btn_auth {
+        padding: 8px;
+    }
+
+    .sign_form > h2 {
+        padding-top: 20px;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .row > [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .btn_white,
+    .btn_dark,
+    .btn_dark_border {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .navbar-brand {
+        padding: 10px 0;
     }
 }
 
@@ -815,6 +1086,8 @@ footer a {
         padding: 8px 16px !important;
         font-size: 14px;
         margin-bottom: 10px;
+        width: 100%;
+        display: block;
     }
 
     .sign_form input {
@@ -824,6 +1097,7 @@ footer a {
 
     .services_item {
         padding: 15px;
+        margin-bottom: 15px;
     }
 
     .services_item_title,
@@ -860,6 +1134,52 @@ footer a {
     .shadow-effect {
         padding: 15px 20px;
     }
+
+    .deserve_title,
+    .promise_title,
+    .experience_title {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 15px;
+    }
+
+    .deserve_text,
+    .promise_text,
+    .experience_text,
+    .experience_description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .promis_box {
+        padding: 12px 18px;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    #customers-testimonials .shadow-effect p,
+    #customers-testimonials .shadow-effect .position {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    #customers-testimonials .shadow-effect .item_name {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+        width: 12px;
+        height: 12px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
+
+    .sign_form {
+        padding: 10px !important;
+    }
 }
 
 /* For extra small devices */
@@ -887,5 +1207,45 @@ footer a {
     .sign_form input {
         padding: 8px 10px;
         font-size: 13px;
+    }
+
+    .who_we_are_title,
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .services_item_shadow,
+    .works_item_shadow {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .navbar-brand img {
+        max-width: 100px;
+    }
+
+    .promis_box {
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+
+    #deserve {
+        padding: 80px 0;
+        margin-bottom: 100px;
+    }
+
+    #who_we_are,
+    #our_signature_services,
+    #why_clients_trust_us,
+    #promise {
+        margin-bottom: 60px;
     }
 }
