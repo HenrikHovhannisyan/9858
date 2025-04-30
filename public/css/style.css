@@ -640,6 +640,75 @@ footer ul {
     color: #000000;
 }
 
+#about_banner {
+    background-image: url(../img/banner/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 245px 15px;
+}
+
+#about_info > .container {
+    max-width: 896px;
+    text-align: center;
+    padding: 200px 15px;
+}
+
+.about_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about_desription {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.about_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#personal_shopper {
+    margin-bottom: 200px;
+}
+
+#freight_forwarding_services {
+    background-image: url("../img/FreightForwardingServices_bg.png");
+    margin-bottom: 200px;
+    padding: 160px 0;
+}
+
+.about_why_choose_text {
+    max-width: 895px;
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 40px auto;
+}
+
 /*=============== BREAKPOINTS ===============*/
 @media (max-width: 1200px) {
     .banner_title {
@@ -1015,7 +1084,11 @@ footer ul {
     }
 
     .who_we_are_title,
-    .services_title {
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title,
+    .about_desription {
         font-size: 32px;
         line-height: 48px;
     }
@@ -1036,6 +1109,8 @@ footer ul {
     .sign_form textarea {
         width: 100%;
         margin-bottom: 10px;
+        font-size: 14px;
+        padding: 10px 12px;
     }
 
     .btn_auth {
@@ -1058,6 +1133,34 @@ footer ul {
         max-width: 70%;
     }
 
+    #about_info > .container {
+        padding: 100px 15px;
+    }
+
+    .about_text,
+    .services_item_text,
+    .services_item_shadow_text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    #deserve {
+        padding: 80px 0;
+        margin-bottom: 100px;
+    }
+
+    #freight_forwarding_services {
+        padding: 80px 0;
+        margin-bottom: 100px;
+    }
+
+    #personal_shopper,
+    #our_signature_services,
+    #why_clients_trust_us,
+    #promise {
+        margin-bottom: 100px;
+    }
+
     .services_item {
         padding: 20px 15px;
         margin-bottom: 20px;
@@ -1065,11 +1168,278 @@ footer ul {
     }
 }
 
-/* For small devices */
+/* Для очень маленьких устройств */
 @media screen and (max-width: 400px) {
     .banner_title {
         font-size: 28px;
         line-height: 42px;
+    }
+
+    .banner_text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #index_banner,
+    #about_banner,
+    #luxury_delivery_banner {
+        padding: 60px 10px;
+    }
+
+    #customers-testimonials .shadow-effect p {
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+
+    #customers-testimonials .shadow-effect .item_name {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #customers-testimonials .shadow-effect .position {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .owl-carousel .owl-item img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .who_we_are_title,
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title,
+    .about_desription {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .about_title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .dress_title,
+    .dress_text {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .services_item_title,
+    .services_item_shadow_title,
+    .promis_box_title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .btn_white,
+    .btn_dark,
+    .btn_dark_border,
+    .btn_white_border {
+        padding: 8px 16px !important;
+        font-size: 14px;
+    }
+
+    .sign_form > h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    footer {
+        padding: 30px 0;
+    }
+
+    footer a,
+    nav a {
+        font-size: 14px;
+    }
+
+    .shadow-effect {
+        padding: 15px 20px;
+    }
+
+    .promis_box {
+        padding: 12px 16px;
+    }
+
+    .works_item_shadow {
+        padding: 16px;
+    }
+
+    #deserve {
+        padding: 60px 0;
+    }
+
+    #about_info > .container {
+        padding: 80px 15px;
+    }
+
+    .navbar-brand img {
+        max-width: 150px;
+    }
+
+    .experience_text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* Для сверхмалых устройств */
+@media screen and (max-width: 350px) {
+    .banner_title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .banner_text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .who_we_are_title,
+    .services_title,
+    .deserve_title,
+    .promise_title,
+    .experience_title,
+    .about_desription {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .about_title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .btn_white,
+    .btn_dark,
+    .btn_dark_border,
+    .btn_white_border {
+        padding: 6px 12px !important;
+        font-size: 13px;
+    }
+
+    .sign_form > h2 {
+        font-size: 24px;
+        line-height: 36px;
+        padding-top: 12px;
+    }
+
+    .sign_form > p,
+    .privacy_policy_text > p,
+    .about_text,
+    .services_item_text,
+    .services_item_shadow_text,
+    .who_we_are_text,
+    .deserve_text,
+    .promise_text,
+    .experience_description {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .dress_title,
+    .dress_text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .services_item_title,
+    .services_item_shadow_title,
+    .promis_box_title {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .experience_text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .shadow-effect {
+        padding: 12px 15px;
+    }
+
+    #index_banner,
+    #about_banner,
+    #luxury_delivery_banner {
+        padding: 50px 10px;
+    }
+
+    #deserve,
+    #freight_forwarding_services {
+        padding: 50px 0;
+    }
+
+    #about_info > .container {
+        padding: 60px 15px;
+    }
+
+    .navbar-brand img {
+        max-width: 130px;
+    }
+
+    .promis_box {
+        padding: 10px 12px;
+        margin-top: 30px;
+    }
+
+    .works_item_shadow {
+        padding: 12px;
+    }
+
+    footer {
+        padding: 25px 0;
+    }
+
+    footer a,
+    nav a {
+        font-size: 13px;
+    }
+
+    .sign_form input,
+    .sign_form select,
+    .sign_form textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .btn_auth {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    #customers-testimonials .shadow-effect p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 12px;
+    }
+
+    #customers-testimonials .shadow-effect .item_name {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #customers-testimonials .shadow-effect .position {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .owl-carousel .owl-item img {
+        max-width: 50px;
+        margin-bottom: 8px;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+        width: 12px;
+        height: 12px;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots {
+        margin-top: 15px;
     }
 
     .banner_text {

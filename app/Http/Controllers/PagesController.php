@@ -10,4 +10,9 @@ class PagesController extends Controller
     {
         return view('pages.luxury-delivery');
     }
+
+    public function about()
+    {
+        return view('pages.about');
+    }
 }

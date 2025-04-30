@@ -129,9 +129,7 @@
                 </div>
             </div>
             <div class="col-md-6 p-0">
-                <div class="text-end">
-                    <img src="{{ asset('img/promise.png') }}" alt="promise" class="img-fluid">
-                </div>
+                <img src="{{ asset('img/promise.png') }}" alt="promise" class="img-fluid ms-auto">
             </div>
         </div>
     </div>
