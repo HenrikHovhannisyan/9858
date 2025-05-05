@@ -61,7 +61,7 @@
 <!-- Start Personal Shopper -->
 <section id="personal_shopper">
     <div class="container-fluid">
-        <div class="container m-0">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="promise_right">
@@ -97,7 +97,7 @@
 
 <!-- Start What We Deliver with Care -->
 <section id="our_signature_services">
-    <div class="container-fluid">
+    <div class="container">
         <h2 class="services_title">What We Deliver with Care</h2>
         <div class="row ps-3 pe-3">
             <div class="col-lg-3 col-md-6 services_item">

@@ -20,6 +20,10 @@ p {
     margin-bottom: 0;
 }
 
+#navbarSupportedContent ul {
+    gap: 24px;
+}
+
 .container-fluid {
     max-width: 1928px;
 }
@@ -245,7 +249,7 @@ footer ul {
 }
 
 .who_we_are_right {
-    padding: 15px 0;
+    padding: 15px 0 15px 280px;
 }
 
 .who_we_are_title {
@@ -584,6 +588,10 @@ footer ul {
     margin-bottom: 200px;
 }
 
+#promise .promise_right {
+    padding-left: 280px;
+}
+
 .promise_title {
     color: #000000;
     font-family: Playfair Display;
@@ -740,7 +748,7 @@ footer ul {
 }
 
 #search {
-    margin-top: 250px;
+    margin-top: 160px;
     margin-bottom: 200px;
 }
 
@@ -944,7 +952,7 @@ footer ul {
 
 #luxury_gateway .promise_right {
     max-width: 896px;
-    margin-left: auto;
+    padding-left: 280px;
 }
 
 #luxury_gateway .promise_right > .promise_text {
@@ -1012,12 +1020,19 @@ footer ul {
     }
 
     #search {
-        margin-top: 200px;
+        margin-top: 150px;
         margin-bottom: 150px;
     }
 
     #search_result {
         margin-bottom: 120px;
+    }
+
+    .who_we_are_right,
+    #promise .promise_right,
+    #promise.promise_right,
+    #luxury_gateway .promise_right {
+        padding-left: unset;
     }
 }
 /* For large devices */

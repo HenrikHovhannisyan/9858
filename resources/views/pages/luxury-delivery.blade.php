@@ -46,7 +46,7 @@
 
 <!-- Start What We Deliver with Care -->
 <section id="our_signature_services">
-    <div class="container-fluid">
+    <div class="container">
         <h2 class="services_title">What We Deliver with Care</h2>
         <div class="row ps-3 pe-3">
             <div class="col-lg-3 col-md-6 services_item">
