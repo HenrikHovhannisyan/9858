@@ -13,6 +13,9 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('shop') }}">Shop</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('luxury_delivery') }}">Luxury Delivery</a>
                     </li>
                     <li class="nav-item">
