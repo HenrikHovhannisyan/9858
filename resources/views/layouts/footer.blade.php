@@ -8,7 +8,7 @@
             <div class="col-lg-4 d-flex justify-content-lg-center">
                 <ul>
                     <li class="mb-2">
-                        <a href="#">Luxury Delivery</a>
+                        <a href="{{ route('luxury_delivery') }}">Luxury Delivery</a>
                     </li>
                     <li class="mb-2">
                         <a href="#">Custom Packaging</a>
@@ -21,7 +21,7 @@
             <div class="col-lg-4 d-flex justify-content-lg-end">
                 <ul>
                     <li class="mb-2">
-                        <a href="#">About</a>
+                        <a href="{{ route('about') }}">About</a>
                     </li>
                     <li class="mb-2">
                         <a href="#">Contact</a>
