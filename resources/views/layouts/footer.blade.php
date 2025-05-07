@@ -11,7 +11,7 @@
                         <a href="{{ route('luxury_delivery') }}">Luxury Delivery</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#">Custom Packaging</a>
+                        <a href="{{ route('custom_packaging') }}">Custom Packaging</a>
                     </li>
                     <li class="mb-2">
                         <a href="#">Concierge Service</a>

@@ -19,7 +19,7 @@
                         <a class="nav-link" href="{{ route('luxury_delivery') }}">Luxury Delivery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Custom Packaging</a>
+                        <a class="nav-link" href="{{ route('custom_packaging') }}">Custom Packaging</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Concierge Service</a>

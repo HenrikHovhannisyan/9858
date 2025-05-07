@@ -300,6 +300,7 @@ footer ul {
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0%;
+    margin-bottom: 16px;
 }
 
 .services_item_text {
@@ -790,4 +791,149 @@ footer ul {
     line-height: 28px;
     letter-spacing: 0%;
     color: #000000;
+}
+
+#custom_packaging_banner,
+#packaging_apart,
+#packaging_options,
+#tailored_for_you,
+#need_custom {
+    margin-bottom: 160px;
+}
+
+#custom_packaging_banner {
+    background-image: url("../img/banner/custom_packaging.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+#packaging_apart h2 {
+    max-width: 869px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#packaging_options h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 55px;
+}
+
+#packaging_options th {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #161616;
+}
+
+#packaging_options td {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #161616;
+}
+
+#packaging_options th,
+#packaging_options td {
+    border-right: 2px solid #0000000f;
+    border-bottom: 2px solid #0000000f;
+}
+#packaging_options th:last-child,
+#packaging_options td:last-child {
+    border-right: unset;
+}
+
+#packaging_options tr:last-child > td {
+    border-bottom: unset;
+}
+
+.tailored_for_you_container {
+    max-width: 664px;
+}
+
+#tailored_for_you .tailored_for_you_container > h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+#tailored_for_you .tailored_for_you_container > h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #161616;
+    margin-bottom: 40px;
+}
+
+#tailored_for_you .tailored_for_you_container > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #161616;
+    margin-bottom: 12px;
+}
+
+#need_custom {
+    text-align: center;
+}
+
+#need_custom h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+#need_custom p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #161616;
+    margin-bottom: 40px;
+}
+#need_custom a {
+    background: #4a4458;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+#need_custom a:hover {
+    background: #332e3d;
 }

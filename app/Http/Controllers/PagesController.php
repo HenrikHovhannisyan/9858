@@ -20,4 +20,9 @@ class PagesController extends Controller
     {
         return view('pages.shop');
     }
+
+    public function custom_packaging()
+    {
+        return view('pages.custom-packaging');
+    }
 }

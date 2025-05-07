@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/luxury-delivery', [PagesController::class, 'luxury_delivery'])->name('luxury_delivery');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
+Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 
 
 Auth::routes();
