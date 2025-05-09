@@ -73,6 +73,39 @@
         max-width: 90%;
         margin: 0 auto;
     }
+
+    #concierge_service_banner {
+        margin-top: 160px;
+        margin-bottom: 180px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 90px;
+        line-height: 120px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    .global_discreet_left {
+        padding: 150px 20px 20px 180px;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    .global_discreet_left p {
+        font-size: 44px;
+        line-height: 60px;
+    }
+
+    .need_personal_assistance_containr {
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -114,6 +147,64 @@
         width: 100%;
         overflow-x: auto;
         display: block;
+    }
+
+    #concierge_service_banner {
+        margin-top: 120px;
+        margin-bottom: 140px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 70px;
+        line-height: 90px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    #what_we_offer,
+    #global_discreet,
+    #our-concierge {
+        margin-bottom: 120px;
+    }
+
+    .global_discreet_left {
+        padding: 100px 20px 20px 100px;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .global_discreet_left p {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    #our-concierge h2 {
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    #our-concierge p {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .need_personal_assistance_containr h2 {
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    #need_personal_assistance {
+        padding: 120px 0;
+    }
+
+    .need_personal_assistance_containr {
+        padding: 48px 24px;
     }
 }
 
@@ -180,6 +271,75 @@
         line-height: 28px;
         margin-bottom: 24px;
     }
+
+    #concierge_service_banner {
+        margin-top: 100px;
+        margin-bottom: 120px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 50px;
+        line-height: 70px;
+        margin-bottom: 24px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    #what_we_offer,
+    #global_discreet,
+    #our-concierge {
+        margin-bottom: 80px;
+    }
+
+    .global_discreet_left {
+        padding: 80px 20px 20px 40px;
+    }
+
+    .global_discreet_left > div {
+        max-width: 100%;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 48px;
+        line-height: 64px;
+    }
+
+    .global_discreet_left p {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .global_discreet_right > .promis_box {
+        max-width: 100%;
+    }
+
+    #our-concierge h2 {
+        font-size: 36px;
+        line-height: 54px;
+    }
+
+    #our-concierge p {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 20px 15px;
+    }
+
+    #need_personal_assistance {
+        padding: 80px 0;
+    }
+
+    .need_personal_assistance_containr {
+        padding: 40px 20px;
+        max-width: 90%;
+    }
+
+    .need_personal_assistance_containr h2 {
+        font-size: 36px;
+        line-height: 54px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -214,6 +374,66 @@
         padding: 8px 16px;
         font-size: 14px;
     }
+
+    #concierge_service_banner {
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 40px;
+        line-height: 56px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    #concierge_service_banner p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .global_discreet_left {
+        padding: 60px 15px 15px 15px;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .global_discreet_left p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    #our-concierge h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    #our-concierge p {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 16px 10px;
+    }
+
+    .need_personal_assistance_containr {
+        padding: 32px 16px;
+        border-width: 1px;
+    }
+
+    .need_personal_assistance_containr h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .need_personal_assistance_containr p {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -238,6 +458,31 @@
     #tailored_for_you .tailored_for_you_container > p {
         font-size: 14px;
         line-height: 22px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .global_discreet_left p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #our-concierge p {
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -297,6 +542,41 @@
     #need_custom a {
         padding: 6px 12px;
         font-size: 13px;
+    }
+
+    #concierge_service_banner h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    #concierge_service_banner h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .global_discreet_left h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .global_discreet_left p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    #our-concierge h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    #our-concierge p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .need_personal_assistance_containr h2 {
+        font-size: 24px;
+        line-height: 36px;
     }
 }
 

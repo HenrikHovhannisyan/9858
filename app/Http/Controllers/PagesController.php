@@ -25,4 +25,9 @@ class PagesController extends Controller
     {
         return view('pages.custom-packaging');
     }
+
+    public function concierge_service()
+    {
+        return view('pages.concierge-service');
+    }
 }
