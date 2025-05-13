@@ -2,6 +2,14 @@
 @section('title') - Luxury Delivery @endsection
 
 @section('content')
+<div class="container">
+    <div class="border m-3">
+        <p class="p-3 pb-0">Search (US)</p>
+        <script async src="https://cse.google.com/cse.js?cx=91374774a11a041a3">
+        </script>
+        <div class="gcse-search"></div>
+    </div>
+</div>
 <!-- Start Banner -->
 <section id="banner">
     <div class="container-fluid" id="luxury_delivery_banner">

@@ -13,6 +13,13 @@
             <p class="search_text">
                 Looking for a rare handbag, exclusive timepiece, or limited-edition fragrance? Use our curated search to find your favorite luxury brands. We’ll guide you to their official boutiques—then take care of everything from purchase to secure global delivery.
             </p>
+
+            <div class="border mb-3">
+                <p class="p-3 pb-0">Search (Adidas, Dior, Chanel, Neiman Marcus, Nike)</p>
+                <script async src="https://cse.google.com/cse.js?cx=12830775a00314525">
+                </script>
+                <div class="gcse-search"></div>
+            </div>
             <form action="#">
                 <input type="text" placeholder="Brand name">
                 <button type="submit">Search brand</button>
@@ -37,7 +44,7 @@
         </div>
         @endfor
     </div>
-    </div>
+
 </section>
 <!-- End search result -->
 
