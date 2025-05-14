@@ -15,8 +15,8 @@
             </p>
 
             <div class="border mb-3">
-                <p class="p-3 pb-0">Search (Adidas, Dior, Chanel, Neiman Marcus, Nike)</p>
-                <script async src="https://cse.google.com/cse.js?cx=12830775a00314525">
+                <p class="p-3 pb-0">Search (US)</p>
+                <script async src="https://cse.google.com/cse.js?cx=91374774a11a041a3">
                 </script>
                 <div class="gcse-search"></div>
             </div>
