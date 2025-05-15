@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -22,6 +23,8 @@ class User extends Authenticatable
         'last_name',
         'email',
         'password',
+        'address_unique_id',
+        'cardholder_id',
     ];
 
     /**
@@ -42,4 +45,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($user) {
+            do {
+                $randomId = strtoupper(Str::random(2)) . rand(100, 999);
+            } while (User::where('address_unique_id', $randomId)->exists());
+
+            $user->address_unique_id = $randomId;
+        });
+    }
 }

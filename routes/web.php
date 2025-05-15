@@ -22,6 +22,8 @@ Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
 Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
+Route::post('/issuing-card', [\App\Http\Controllers\IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
+Route::get('/my-card', [\App\Http\Controllers\IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
 
 
 Auth::routes();
