@@ -24,6 +24,13 @@
                 <strong>Last 4 digits:</strong> **** **** **** {{ $cardDetails['last4'] }}<br>
                 <strong>Expiration:</strong> {{ $cardDetails['exp_month'] }}/{{ $cardDetails['exp_year'] }}<br>
                 <strong>Card type:</strong> {{ ucfirst($cardDetails['type']) }}<br>
+                <strong>  Balance:</strong>
+                @if($issuingBalance && isset($issuingBalance['available']) && count($issuingBalance['available']) > 0)
+                {{ number_format($issuingBalance['available'][0]['amount'] / 100, 2, '.', ' ') }} {{ strtoupper($issuingBalance['available'][0]['currency']) }}
+                @else
+                Not available
+                @endif
+                <br>
             </p>
         </div>
     </div>

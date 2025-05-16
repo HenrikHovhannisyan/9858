@@ -76,11 +76,12 @@ class IssuingCardController extends Controller
         $user = Auth::user();
         $virtualCard = \App\Models\VirtualCard::where('user_id', $user->id)->latest()->first();
         $cardDetails = null;
+        $issuingBalance = null;
         if ($virtualCard) {
             try {
                 $card = Card::retrieve($virtualCard->stripe_card_id);
-                // For security, Stripe does not return full card number or CVV via API after creation.
-                // Only the last4, exp, and brand are available. Card type is available as $card->type.
+                $balance = \Stripe\Balance::retrieve();
+                $issuingBalance = isset($balance->issuing) ? $balance->issuing : null;
                 $cardDetails = [
                     'brand' => $card->brand,
                     'last4' => $card->last4,
@@ -93,7 +94,7 @@ class IssuingCardController extends Controller
                 $cardDetails = null;
             }
         }
-        return view('virtual-card', compact('cardDetails', 'user'));
+        return view('virtual-card', compact('cardDetails', 'user', 'issuingBalance'));
 
     }
 }
