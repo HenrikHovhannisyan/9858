@@ -8,7 +8,7 @@
             @include('layouts.dashboard.sidebar')
         </div>
         <div class="col-lg-10">
-            <section id="orders">
+            <section id="orders" class="user_dashboard">
                 <h2>My Orders</h2>
                 @if(session('success'))
                 <div class="alert alert-success">{{ session('success') }}</div>

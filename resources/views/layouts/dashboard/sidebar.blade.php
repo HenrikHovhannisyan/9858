@@ -15,5 +15,14 @@
         <a href="#" class="list-group-item list-group-item-action{{ request()->is('dashboard/settings*') ? ' active' : '' }}">
             <span>Settings</span>
         </a>
+        <a class="list-group-item list-group-item-action" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
     </div>
 </div>

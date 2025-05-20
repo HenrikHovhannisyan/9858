@@ -1116,6 +1116,10 @@ footer ul {
     padding: 40px;
 }
 
+.user_dashboard {
+    height: calc(100vh - 184px - 56px);
+}
+
 #orders > h2 {
     font-family: Intrepid;
     font-weight: 5;
