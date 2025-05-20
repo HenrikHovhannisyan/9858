@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard.app')
 @section('title') - Order Details @endsection
 
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-2 ps-0 pe-0">
-            @include('layouts.sidebar')
+            @include('layouts.dashboard.sidebar')
         </div>
         <div class="col-lg-10">
             <h2>Order Details</h2>

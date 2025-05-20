@@ -46,7 +46,8 @@
                     @endif
                     @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <img src="{{ asset('img/icons/avatar.png') }}" class="img-fluid" alt="avatar">
                             {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
                         </a>
 
