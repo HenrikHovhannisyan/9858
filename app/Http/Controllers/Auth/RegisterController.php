@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -49,8 +49,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,38 +63,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name'],
+        return User::create([
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-
-        // Creating a Cardholder in Stripe
-        try {
-            \Stripe\Stripe::setApiKey(config('stripe.secret_key'));
-            $fullName = $user->first_name . ' ' . $user->last_name;
-            $addressUniqueId = $user->address_unique_id;
-            $cardholder = \Stripe\Issuing\Cardholder::create([
-                'name' => $fullName,
-                'email' => $user->email,
-                'type' => 'individual',
-                'billing' => [
-                    'address' => [
-                        'line1' => '123 Main St ' . $addressUniqueId,
-                        'city' => 'New York',
-                        'state' => 'NY',
-                        'country' => 'US',
-                        'postal_code' => '10001',
-                    ],
-                ],
-            ]);
-            $user->cardholder_id = $cardholder->id;
-            $user->save();
-        } catch (\Exception $e) {
-            
-        }
-
-        return $user;
     }
 }

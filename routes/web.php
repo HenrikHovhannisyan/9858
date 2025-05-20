@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\IssuingCardController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -14,6 +16,8 @@ use Illuminate\Support\Facades\Auth;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
+Auth::routes();
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,8 +26,10 @@ Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
 Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
-Route::post('/issuing-card', [\App\Http\Controllers\IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
-Route::get('/my-card', [\App\Http\Controllers\IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
-
+Route::post('/issuing-card', [IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
+Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
+Route::resource('orders', OrderController::class)->middleware('auth');
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1086,3 +1086,53 @@ footer ul {
     color: #ffffff;
     margin-bottom: 40px;
 }
+
+#sidebar {
+    background-color: #141218;
+    height: 100%;
+}
+#sidebar > .list-group {
+    padding-top: 24px;
+    border-top: 2px solid #f6edff14;
+}
+#sidebar .list-group > .list-group-item {
+    padding: 24px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #f6edff;
+    border-radius: 0;
+    border: 0;
+    background-color: unset;
+}
+#sidebar .list-group > .list-group-item.active {
+    background: #f6edff14;
+}
+
+#orders {
+    padding: 40px;
+}
+
+#orders > h2 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+#orders .filter_section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#orders .filter_section > a {
+    width: 320px;
+    max-width: 100%;
+}
