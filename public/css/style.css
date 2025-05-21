@@ -1114,7 +1114,7 @@ footer ul {
 
 .user_dashboard {
     padding: 40px;
-    height: calc(100vh - 184px - 56px);
+    min-height: calc(100vh - 184px - 56px);
 }
 
 .user_dashboard > h2 {
@@ -2060,4 +2060,95 @@ footer ul {
 }
 #sidebar .list-group > .list-group-item.active {
     background: #f6edff14;
+}
+
+.card_name {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.card_balance {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.card_number,
+.card_expiration,
+.card_cvv {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #7a7289;
+}
+
+.card_number > strong,
+.card_expiration > strong,
+.card_cvv > strong {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.address_card {
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 470px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.address_card > h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 8px;
+}
+
+.address_card > h4 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.address_card > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    border-bottom: 1px solid #0000000f;
+    padding: 12px 0;
+}
+
+.address_card > p:last-child {
+    border-bottom: unset;
 }

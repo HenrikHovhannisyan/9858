@@ -94,7 +94,6 @@ class IssuingCardController extends Controller
                 $cardDetails = null;
             }
         }
-        return view('virtual-card', compact('cardDetails', 'user', 'issuingBalance'));
-
+        return view('pages/dashboard/virtual-card', compact('cardDetails', 'user', 'issuingBalance'));
     }
 }

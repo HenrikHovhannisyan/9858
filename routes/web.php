@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\IssuingCardController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -28,6 +29,7 @@ Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->n
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
 Route::post('/issuing-card', [IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
 Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
+Route::resource('addresses', AddressController::class)->middleware('auth');
 Route::resource('orders', OrderController::class)->middleware('auth');
 
 Auth::routes();
