@@ -16,6 +16,7 @@ class Order extends Model
         'product_price',
         'shipping_method',
         'status',
+        'file',
     ];
 
     protected static function boot()

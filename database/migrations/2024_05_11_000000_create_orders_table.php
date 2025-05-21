@@ -16,8 +16,8 @@ return new class extends Migration
             $table->decimal('product_price', 10, 2);
             $table->string('shipping_method');
             $table->enum('status', ['Pending', 'In Transit', 'Delivered'])->default('Pending');
+            $table->string('file')->nullable();
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

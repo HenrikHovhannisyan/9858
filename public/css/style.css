@@ -1112,15 +1112,12 @@ footer ul {
     background: #f6edff14;
 }
 
-#orders {
-    padding: 40px;
-}
-
 .user_dashboard {
+    padding: 40px;
     height: calc(100vh - 184px - 56px);
 }
 
-#orders > h2 {
+.user_dashboard > h2 {
     font-family: Intrepid;
     font-weight: 5;
     font-size: 24px;
@@ -1130,13 +1127,937 @@ footer ul {
     color: #141218;
 }
 
-#orders .filter_section {
+.user_dashboard .filter_section {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-#orders .filter_section > a {
+.user_dashboard .filter_section > a {
     width: 320px;
     max-width: 100%;
+}
+
+.user_dashboard > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 16px;
+}
+
+.dashboard_card {
+    padding: 16px;
+    margin-bottom: 32px;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+}
+
+.dashboard_card > h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.dashboard_card > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 20px;
+}
+
+.shipping_method_card {
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+}
+
+.shipping_method_card input {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: 1px solid #79747e;
+}
+
+.shipping_method_card input:checked {
+    background-color: #4a4458;
+    border-color: #4a4458;
+}
+
+.shipping_method_card > label {
+    cursor: pointer;
+}
+
+.dashboard_card input {
+    border: 1px solid #79747e;
+}
+.dashboard_card input::placeholder {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #7a7289;
+}
+
+.attach_file {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.attach_file > p,
+.attach_file > span {
+    color: #7a7289;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 12px 10px;
+}
+
+.attach_file > p {
+    width: 100%;
+}
+
+.attach_file > span {
+    cursor: pointer;
+    padding: 10px 24px;
+    min-width: max-content;
+}
+
+.total_price {
+    max-width: max-content;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.total_price h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    text-align: right;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.total_price p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: right;
+    vertical-align: middle;
+    color: #141218;
+}
+
+#orders nav {
+    background-color: transparent;
+}
+#orders nav a {
+    color: #141218 !important;
+}
+
+.pagination .page-link {
+    color: #222;
+    background: #fff;
+    border: 1px solid #4a4458;
+    border-radius: 6px;
+    padding: 6px 14px;
+    margin: 0 2px;
+    transition: background 0.2s, color 0.2s;
+}
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+    background: #fff;
+    color: #fff;
+    border-color: #4a4458;
+    background-color: #4a4458;
+}
+.pagination .page-item.disabled .page-link {
+    color: #aaa;
+    background: #f8f9fa;
+    border-color: #ddd;
+}
+
+#customers-testimonials .shadow-effect p {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#customers-testimonials .shadow-effect .item_name {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+#customers-testimonials .shadow-effect .position {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#customers-testimonials .item {
+    text-align: center;
+    opacity: 0.2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 80px;
+    border-radius: 100%;
+    margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #373737;
+    border-radius: 100%;
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+    width: 15px;
+    height: 15px;
+}
+#customers-testimonials.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    background: #e6e0e9;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 2px 5px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+}
+
+#dress {
+    background-color: #ececec;
+    padding: 44px 0;
+}
+
+.dress_title {
+    color: #141218;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.dress_text {
+    color: #141218;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.dress_right > .links {
+    color: #4a4458;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+}
+
+#luxury_delivery_banner {
+    background-image: url("../img/banner/luxury_delivery.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 245px 15px;
+}
+
+#deserve {
+    background-color: #e8e8e8;
+    margin-bottom: 200px;
+    padding: 160px 0;
+}
+
+#deserve_container {
+    max-width: 895px;
+    text-align: center;
+}
+
+.deserve_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.deserve_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#promise {
+    margin-bottom: 200px;
+}
+
+#promise .promise_right {
+    padding-left: 280px;
+}
+
+.promise_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.promise_text {
+    color: #161616;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.promis_box {
+    max-width: 550px;
+    padding: 16px 24px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+    border-image-slice: 1;
+}
+
+.promis_box_title {
+    color: #161616;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.experience_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.experience_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-bottom: 24px;
+}
+
+.experience_description {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.works_item_shadow {
+    box-shadow: 0px 1px 2px 0px #0000004d;
+    padding: 24px;
+    border-radius: 4px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+#bottom_banner_bg {
+    background-image: url("../img/banner/bottom_banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 15px;
+    color: #000000;
+}
+
+#about_banner {
+    background-image: url(../img/banner/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 245px 15px;
+}
+
+#about_info > .container {
+    max-width: 896px;
+    text-align: center;
+    padding: 200px 15px;
+}
+
+.about_title {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about_desription {
+    color: #000000;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.about_text {
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#personal_shopper {
+    margin-bottom: 200px;
+}
+
+#freight_forwarding_services {
+    background-image: url("../img/FreightForwardingServices_bg.png");
+    margin-bottom: 200px;
+    padding: 160px 0;
+}
+
+.about_why_choose_text {
+    max-width: 895px;
+    color: #000000;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#search {
+    margin-top: 160px;
+    margin-bottom: 80px;
+}
+
+.search_content {
+    max-width: 895px;
+    margin: 0 auto;
+}
+
+.search_title {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.search_text {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+#search form {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#search form > input {
+    padding: 12px 16px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #7a7289;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 716px;
+}
+
+#search form > button {
+    padding: 16px 24px;
+    background: #4a4458;
+    border-radius: 4px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+#search_result {
+    margin-bottom: 160px;
+}
+
+#search_result .search_result_title {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+#search_result .search_result_items {
+    padding: 32px 72px;
+    box-shadow: 0px 1px 2px 0px #0000004d;
+    border-radius: 4px;
+    display: block;
+}
+
+#search_result .search_result_items img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#luxury_gateway {
+    margin-bottom: 160px;
+}
+
+#luxury_gateway .promise_right {
+    max-width: 896px;
+    padding-left: 280px;
+}
+
+#luxury_gateway .promise_right > .promise_text {
+    margin-bottom: 40px;
+}
+
+#luxury_gateway .promise_right > ul {
+    list-style: none;
+    padding: 0;
+}
+
+#luxury_gateway .promise_right > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+#custom_packaging_banner,
+#packaging_apart,
+#packaging_options,
+#tailored_for_you,
+#need_custom {
+    margin-bottom: 160px;
+}
+
+#custom_packaging_banner {
+    background-image: url("../img/banner/custom_packaging.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+#packaging_apart h2 {
+    max-width: 869px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#packaging_options h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 55px;
+}
+
+#packaging_options th {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #161616;
+}
+
+#packaging_options td {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #161616;
+}
+
+#packaging_options th,
+#packaging_options td {
+    border-right: 2px solid #0000000f;
+    border-bottom: 2px solid #0000000f;
+}
+#packaging_options th:last-child,
+#packaging_options td:last-child {
+    border-right: unset;
+}
+
+#packaging_options tr:last-child > td {
+    border-bottom: unset;
+}
+
+.tailored_for_you_container {
+    max-width: 664px;
+}
+
+#tailored_for_you .tailored_for_you_container > h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+#tailored_for_you .tailored_for_you_container > h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #161616;
+    margin-bottom: 40px;
+}
+
+#tailored_for_you .tailored_for_you_container > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #161616;
+    margin-bottom: 12px;
+}
+
+#need_custom {
+    text-align: center;
+}
+
+#need_custom h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+#need_custom p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #161616;
+    margin-bottom: 40px;
+}
+#need_custom a {
+    background: #4a4458;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+#need_custom a:hover {
+    background: #332e3d;
+}
+
+#concierge_service_banner {
+    margin-top: 200px;
+    margin-bottom: 230px;
+}
+
+#concierge_service_banner > .banner_container {
+    max-width: 100%;
+}
+
+#concierge_service_banner h1 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 150px;
+    letter-spacing: 8%;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+#concierge_service_banner h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+#concierge_service_banner p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 16px;
+    max-width: 895px;
+    margin: auto;
+}
+
+#what_we_offer,
+#global_discreet,
+#our-concierge {
+    margin-bottom: 160px;
+}
+
+.global_discreet_left {
+    background-color: #000000;
+    padding: 200px 20px 20px 280px;
+}
+
+.global_discreet_left > div {
+    max-width: 528px;
+    margin-left: auto;
+}
+
+.global_discreet_left h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 130px;
+    letter-spacing: 8%;
+    color: #ffffff;
+}
+
+.global_discreet_left p {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+    letter-spacing: 8%;
+    color: #ffffff;
+}
+
+.global_discreet_right {
+    display: grid;
+    align-content: end;
+    gap: 16px;
+}
+
+.global_discreet_right > .promis_box {
+    margin: unset;
+    max-width: 780px;
+}
+
+#our-concierge h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+#our-concierge p {
+    padding: 26px 15px;
+    border-top: #0000000f 1px solid;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+#our-concierge p:last-child {
+    border-bottom: #0000000f 1px solid;
+}
+
+#need_personal_assistance {
+    background-image: url("../img/need_personal_assistance.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0;
+}
+
+.need_personal_assistance_containr {
+    border: 1px solid #ffffff;
+    padding: 64px 32px;
+    text-align: center;
+    max-width: 960px;
+    margin: auto;
+}
+
+.need_personal_assistance_containr h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.need_personal_assistance_containr p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+#sidebar {
+    background-color: #141218;
+    height: 100%;
+}
+#sidebar > .list-group {
+    padding-top: 24px;
+    border-top: 2px solid #f6edff14;
+}
+#sidebar .list-group > .list-group-item {
+    padding: 24px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #f6edff;
+    border-radius: 0;
+    border: 0;
+    background-color: unset;
+}
+#sidebar .list-group > .list-group-item.active {
+    background: #f6edff14;
 }

@@ -10,7 +10,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::where('user_id', Auth::id())->latest()->get();
+        $orders = Order::where('user_id', Auth::id())->latest()->paginate(10);
         return view('pages.dashboard.orders.index', compact('orders'));
     }
 
@@ -31,7 +31,6 @@ class OrderController extends Controller
             'product_name' => $request->product_name,
             'product_price' => $request->product_price,
             'shipping_method' => $request->shipping_method,
-            // tracking_number генерируется автоматически
         ]);
         return redirect()->route('orders.index')->with('success', 'Order created successfully!');
     }
@@ -55,9 +54,15 @@ class OrderController extends Controller
             'product_name' => 'required|string|max:255',
             'product_price' => 'required|numeric|min:0',
             'shipping_method' => 'required|string|max:255',
-            'status' => 'required|in:Pending,In Transit,Delivered',
         ]);
-        $order->update($request->only(['product_name', 'product_price', 'shipping_method', 'status']));
+        $order->update($request->only(['product_name', 'product_price', 'shipping_method']));
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('invoices', $filename, 'public');
+            $order->file = $path;
+            $order->save();
+        }
         return redirect()->route('orders.index')->with('success', 'Order updated successfully!');
     }
 
