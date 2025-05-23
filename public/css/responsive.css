@@ -209,11 +209,23 @@
 
     .user_dashboard {
         height: auto;
+        padding: 0;
     }
 
     .total_price {
         position: unset;
         margin-left: auto;
+    }
+
+    #settings {
+        grid-template-columns: 1fr;
+        margin-bottom: 25px;
+    }
+
+    .settings_profile_btn {
+        position: relative;
+        margin-top: 35px;
+        margin-left: 15px;
     }
 }
 

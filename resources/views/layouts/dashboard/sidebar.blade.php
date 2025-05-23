@@ -12,7 +12,7 @@
         <a href="{{ route('my_card') }}" class="list-group-item list-group-item-action{{ request()->routeIs('my_card') ? ' active' : '' }}">
             <span>My Virtual Card</span>
         </a>
-        <a href="#" class="list-group-item list-group-item-action{{ request()->is('dashboard/settings*') ? ' active' : '' }}">
+        <a href="{{ route('settings') }}" class="list-group-item list-group-item-action{{ request()->routeIs('settings') ? ' active' : '' }}">
             <span>Settings</span>
         </a>
         <a class="list-group-item list-group-item-action" href="{{ route('logout') }}"

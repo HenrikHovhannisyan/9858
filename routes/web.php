@@ -27,6 +27,12 @@ Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
 Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
+
+Route::get('/settings', [PagesController::class, 'settings'])->middleware('auth')->name('settings');
+Route::put('/settings', [PagesController::class, 'updateSettings'])->name('settings.update');
+Route::post('/settings/password', [PagesController::class, 'updatePassword'])->name('settings.password.update');
+
+
 Route::post('/issuing-card', [IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
 Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
 Route::resource('addresses', AddressController::class)->middleware('auth');

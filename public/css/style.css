@@ -27,6 +27,25 @@ p {
     margin-bottom: 0;
 }
 
+fieldset {
+    border: 1px solid #79747e;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+legend {
+    font-size: 1rem;
+    font-weight: 600;
+    width: auto;
+    padding: 0 0.5rem;
+    float: unset;
+    margin-bottom: 0;
+}
+
 #navbarSupportedContent ul {
     gap: 24px;
 }
@@ -2158,4 +2177,73 @@ footer ul {
 
 .address_card > p:last-child {
     border-bottom: unset;
+}
+
+#settings {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 340px) 1fr;
+    gap: 32px;
+}
+
+.settings_menu,
+.settings_container {
+    border: 1px solid #79747e;
+    border-radius: 4px;
+}
+
+.settings_menu {
+    padding: 16px 0;
+}
+
+.settings_menu .nav-link {
+    text-align: left;
+    border-radius: unset;
+    padding: 24px;
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+.settings_menu .nav-link.active {
+    background-color: #14121814;
+    color: #141218;
+}
+
+.settings_container {
+    padding: 24px;
+}
+
+.settings_container h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+}
+
+.settings_profile_btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+#settings fieldset {
+    max-width: 575px;
+    max-height: 62px;
+}
+
+#security h4 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 16px;
 }
