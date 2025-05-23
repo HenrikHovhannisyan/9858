@@ -44,7 +44,7 @@ class AddressController extends Controller
             if ($request->wantsJson() || $request->ajax()) {
                 return response()->json(['success' => false, 'message' => 'You can only add one address.'], 422);
             }
-            return redirect()->route('addresses.index')->with('error', 'You can only add one address.');
+            return redirect()->route('pages.dashboard.addresses')->with('error', 'You can only add one address.');
         }
         $validated = $request->validate([
             'address_1' => 'required|string',
@@ -60,7 +60,7 @@ class AddressController extends Controller
         if ($request->wantsJson() || $request->ajax()) {
             return response()->json(['success' => true, 'message' => 'Address added successfully!']);
         }
-        return redirect()->route('addresses.index')->with('success', 'Address added successfully!');
+        return redirect()->route('pages.dashboard.addresses')->with('success', 'Address added successfully!');
     }
 
     /**
@@ -110,7 +110,10 @@ class AddressController extends Controller
             'phone_number' => 'required|string',
         ]);
         $address->update($validated);
-        return response()->json(['success' => true, 'message' => 'The address has been updated successfully!']);
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'message' => 'The address has been updated successfully!']);
+        }
+        return redirect()->route('pages.dashboard.addresses')->with('success', 'The address has been updated successfully!');
     }
 
     /**
@@ -125,6 +128,6 @@ class AddressController extends Controller
             abort(403);
         }
         $address->delete();
-        return redirect()->route('addresses.index')->with('success', 'Address removed!');
+        return redirect()->route('pages.dashboard.addresses')->with('success', 'Address removed!');
     }
 }

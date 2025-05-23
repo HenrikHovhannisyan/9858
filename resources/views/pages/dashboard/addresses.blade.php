@@ -85,7 +85,7 @@
                                 <p>
                                     Phone Number: {{ $address->phone_number }}
                                 </p>
-                                <button class="btn btn_white mt-3" data-id="{{ $address->id }}">Edit</button>
+                                <button class="btn btn_white mt-3 edit-address-btn" data-id="{{ $address->id }}">Edit</button>
                             </div>
                             @empty
                             <tr>
@@ -197,6 +197,8 @@
         </div>
     </div>
 </div>
+
+@endsection
 
 @section('scripts')
 <script>
