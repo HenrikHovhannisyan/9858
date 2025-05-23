@@ -3,7 +3,7 @@
         <a href="{{ route('orders.index') }}" class="list-group-item list-group-item-action{{ request()->routeIs('orders.index') ? ' active' : '' }}">
             <span>My Orders</span>
         </a>
-        <a href="{{ route('addresses.index') }}" class="list-group-item list-group-item-action{{ request()->is('addresses.index') ? ' active' : '' }}">
+        <a href="{{ route('addresses.index') }}" class="list-group-item list-group-item-action{{ request()->routeIs('addresses.index') ? ' active' : '' }}">
             <span>My Addresses</span>
         </a>
         <a href="{{ route('orders.create') }}" class="list-group-item list-group-item-action{{ request()->routeIs('orders.create') ? ' active' : '' }}">
