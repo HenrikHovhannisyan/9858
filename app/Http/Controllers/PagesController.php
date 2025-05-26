@@ -72,4 +72,9 @@ class PagesController extends Controller
 
         return back()->with('success', 'Password updated successfully.');
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }

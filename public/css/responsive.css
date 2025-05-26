@@ -54,7 +54,7 @@
         padding-left: unset;
     }
 
-    #custom_packaging_banner,
+       #contact_banner, #custom_packaging_banner,
     #packaging_apart,
     #packaging_options,
     #tailored_for_you,
@@ -127,7 +127,7 @@
         line-height: 72px;
     }
 
-    #custom_packaging_banner {
+       #contact_banner, #custom_packaging_banner {
         padding-top: 80px;
         padding-bottom: 100px;
     }
@@ -227,6 +227,20 @@
         margin-top: 35px;
         margin-left: 15px;
     }
+
+    #contact_banner {
+        padding: 100px 10px 120px;
+        background-position: center top;
+    }
+
+    #need_personalized_assistance {
+        margin-bottom: 80px;
+        padding: 60px 0;
+    }
+    #need_personalized_assistance h2 {
+        font-size: 40px;
+        line-height: 56px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -261,7 +275,7 @@
         width: 100%;
     }
 
-    #custom_packaging_banner,
+       #contact_banner, #custom_packaging_banner,
     #packaging_apart,
     #packaging_options,
     #tailored_for_you,
@@ -269,7 +283,7 @@
         margin-bottom: 80px;
     }
 
-    #custom_packaging_banner {
+       #contact_banner, #custom_packaging_banner {
         padding-top: 60px;
         padding-bottom: 80px;
     }
@@ -411,7 +425,7 @@
 }
 
 @media (max-width: 576px) {
-    #custom_packaging_banner {
+       #contact_banner, #custom_packaging_banner {
         padding-top: 40px;
         padding-bottom: 60px;
     }
@@ -502,6 +516,33 @@
         font-size: 14px;
         line-height: 24px;
     }
+
+    #contact_banner {
+        padding: 60px 5px 80px;
+        background-size: cover;
+    }
+
+    #need_personalized_assistance {
+        margin-bottom: 40px;
+        padding: 32px 0;
+    }
+    #need_personalized_assistance h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #need_personalized_assistance .contact_form {
+        padding: 12px;
+    }
+    #need_personalized_assistance .contact_form > p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    #need_personalized_assistance .contact_form .form-control {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
 }
 
 @media (max-width: 480px) {

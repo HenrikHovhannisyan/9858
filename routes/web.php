@@ -27,6 +27,7 @@ Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
 Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 
 Route::get('/settings', [PagesController::class, 'settings'])->middleware('auth')->name('settings');
 Route::put('/settings', [PagesController::class, 'updateSettings'])->name('settings.update');

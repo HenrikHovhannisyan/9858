@@ -82,19 +82,7 @@
                     </div>
                 </form>
             </section>
-            @section('scripts')
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var attachBtn = document.getElementById('attachFileBtn');
-                    var fileInput = document.getElementById('fileInput');
-                    if (attachBtn && fileInput) {
-                        attachBtn.addEventListener('click', function() {
-                            fileInput.click();
-                        });
-                    }
-                });
-            </script>
-            @endsection
+
         </div>
     </div>
 </div>

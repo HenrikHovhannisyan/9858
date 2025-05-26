@@ -1773,7 +1773,8 @@ footer ul {
 #packaging_apart,
 #packaging_options,
 #tailored_for_you,
-#need_custom {
+#need_custom,
+#contact_banner {
     margin-bottom: 160px;
 }
 
@@ -2246,4 +2247,48 @@ footer ul {
     vertical-align: middle;
     color: #141218;
     margin-bottom: 16px;
+}
+
+#contact_banner {
+    background-image: url("../img/banner/contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 15px 240px;
+}
+
+#need_personalized_assistance {
+    margin-bottom: 160px;
+}
+
+#need_personalized_assistance h2 {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+#need_personalized_assistance .contact_form {
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+#need_personalized_assistance .contact_form > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 40px;
+}
+
+#need_personalized_assistance .contact_form .form-control {
+    border: 1px solid #79747e;
+    border-radius: 4px;
 }
