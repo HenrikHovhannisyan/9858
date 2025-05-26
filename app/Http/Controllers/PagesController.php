@@ -77,4 +77,9 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function privacy_policy()
+    {
+        return view('pages.privacy-policy');
+    }
 }

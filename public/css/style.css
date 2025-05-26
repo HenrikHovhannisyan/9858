@@ -2292,3 +2292,43 @@ footer ul {
     border: 1px solid #79747e;
     border-radius: 4px;
 }
+
+#privacy_policy {
+    margin-bottom: 160px;
+}
+
+#privacy_policy .privacy_policy_item {
+    margin-bottom: 80px;
+}
+
+#privacy_policy .privacy_policy_item > h2 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 24px;
+}
+
+#privacy_policy .privacy_policy_item > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 12px;
+}
+
+#privacy_policy .privacy_policy_item span {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 12px;
+}

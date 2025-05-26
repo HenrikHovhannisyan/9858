@@ -28,6 +28,7 @@ Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
 Route::get('/custom-packaging', [PagesController::class, 'custom_packaging'])->name('custom_packaging');
 Route::get('/concierge-service', [PagesController::class, 'concierge_service'])->name('concierge_service');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/privacy-policy', [PagesController::class, 'privacy_policy'])->name('privacy-policy');
 
 Route::get('/settings', [PagesController::class, 'settings'])->middleware('auth')->name('settings');
 Route::put('/settings', [PagesController::class, 'updateSettings'])->name('settings.update');
