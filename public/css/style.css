@@ -2225,6 +2225,19 @@ footer ul {
     line-height: 32px;
     letter-spacing: 0.1px;
     vertical-align: middle;
+    color: #141218;
+}
+
+.settings_container p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 40px;
+    max-width: 574px;
 }
 
 .settings_profile_btn {
@@ -2331,4 +2344,61 @@ footer ul {
     letter-spacing: 0%;
     color: #000000;
     margin-bottom: 12px;
+}
+
+#support_form {
+    max-width: 574px;
+}
+
+#support_form .attach_file > p,
+#support_form .attach_file > span {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #7a7289;
+    border: 1px solid #dee2e6;
+    margin-bottom: 0;
+}
+
+.notifications {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications > .box {
+    max-width: 448px;
+    padding: 24px 0;
+}
+
+.notifications > .box > h3 {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+}
+
+.notifications > .box > p {
+    font-family: Intrepid;
+    font-weight: 5;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+    color: #141218;
+    margin-bottom: 0;
+}
+
+.notifications .form-check-input {
+    cursor: pointer;
+}
+
+.notifications .form-check-input:checked {
+    background-color: #4a4458;
+    border-color: #4a4458;
 }

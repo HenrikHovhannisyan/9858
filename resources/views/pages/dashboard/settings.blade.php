@@ -87,7 +87,6 @@
                                         </div>
                                     </form>
                                 </div>
-
                                 <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
                                     <h3>Security</h3>
 
@@ -132,9 +131,35 @@
                                         </div>
                                     </form>
                                 </div>
-
                                 <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
                                     <h3>Notifications</h3>
+                                    <form action="{{ route('settings.password.update') }}" method="POST">
+                                        @csrf
+
+                                        <div class="notifications mt-5 border-top">
+                                            <div class="box">
+                                                <h3>Email Notifications</h3>
+                                                <p>You’ll receive updates about order confirmations, delivery milestones, and personalized offers—directly to your inbox.</p>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                            </div>
+                                        </div>
+                                        <div class="notifications border-top border-bottom">
+                                            <div class="box">
+                                                <h3>SMS Notifications</h3>
+                                                <p>Stay informed in real time with text alerts about shipment status, concierge messages, and time-sensitive updates..</p>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                            </div>
+                                        </div>
+
+                                        <div class="settings_profile_btn">
+                                            <a href="{{ url()->previous() }}" class="btn btn_white">Cancel</a>
+                                            <button type="submit" class="btn btn_dark">Save Changes</button>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="tab-pane fade" id="payment-methods" role="tabpanel" aria-labelledby="payment-methods-tab">
                                     <h3>Payment Methods</h3>
@@ -147,6 +172,29 @@
                                 </div>
                                 <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
                                     <h3>Support</h3>
+                                    <form action="" method="POST" id="support_form">
+                                        @csrf
+
+                                        <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
+                                        <textarea name="message" class="form-control mb-3" placeholder="Message"></textarea>
+
+                                        <div class="mb-3">
+                                            <input type="file" class="d-none" name="file" id="fileInput" value="">
+                                            <div class="attach_file">
+                                                <p>
+                                                    No file (pdf, jpg, png)
+                                                </p>
+                                                <span id="attachFileBtn" style="cursor:pointer;">
+                                                    Attach a file
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="settings_profile_btn">
+                                            <a href="{{ url()->previous() }}" class="btn btn_white">Cancel</a>
+                                            <button type="submit" class="btn btn_dark">Send</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
