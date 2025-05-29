@@ -2402,3 +2402,8 @@ footer ul {
     background-color: #4a4458;
     border-color: #4a4458;
 }
+
+#shop_slider .owl-carousel .owl-item img {
+    width: 100%;
+    max-width: 320px;
+}

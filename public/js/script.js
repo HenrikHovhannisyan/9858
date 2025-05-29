@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 },
             });
-            console.log("Owl Carousel инициализирован");
         });
     } else {
         console.error(
@@ -67,4 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
             fileInput.click();
         });
     }
+});
+
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+    items: 5,
+    loop: true,
+    responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    nav: false,
+    responsive: {
+        0: {
+            items: 2,
+        },
+        600: {
+            items: 3,
+        },
+        1000: {
+            items: 5,
+        },
+    },
 });

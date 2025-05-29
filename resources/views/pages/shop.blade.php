@@ -15,36 +15,37 @@
             </p>
 
             <div class="border mb-3">
-                <p class="p-3 pb-0">Search (US)</p>
                 <script async src="https://cse.google.com/cse.js?cx=91374774a11a041a3">
                 </script>
                 <div class="gcse-search"></div>
             </div>
-            <form action="#">
+            <form action="#" class="d-none">
                 <input type="text" placeholder="Brand name">
                 <button type="submit">Search brand</button>
             </form>
         </div>
+        <p class="text-center mt-3">
+            <strong>
+                “Shop Premier Global Brands”
+            </strong>
+        </p>
     </div>
 </section>
 <!-- End Serach -->
 
 <!-- Start search result -->
-<section id="search_result">
-    <div class="container">
-        <p class="search_result_title">
-            We found one exclusive match for ‘Nike’
-        </p>
+<section id="shop_slider">
+    <div class="container-fluid">
         <div class="row">
-            @for($i = 0; $i < 9; $i++)
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
-                <a href="#" class="search_result_items">
-                    <img src="{{ asset('img/nike.png') }}" class="m-auto" alt="search_result">
-                </a>
+            <div class="owl-carousel owl-theme">
+                @for($i=1; $i<=5; $i++)
+                    <div class="item">
+                        <img src="{{ asset('img/shop-slider/'.$i.'.png') }}" alt="search result" class="img-fluid">
+            </div>
+            @endfor
         </div>
-        @endfor
     </div>
-
+    </div>
 </section>
 <!-- End search result -->
 
