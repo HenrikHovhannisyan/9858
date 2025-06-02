@@ -35,10 +35,10 @@ Route::put('/settings', [PagesController::class, 'updateSettings'])->name('setti
 Route::post('/settings/password', [PagesController::class, 'updatePassword'])->name('settings.password.update');
 
 
-Route::post('/issuing-card', [IssuingCardController::class, 'create'])->middleware('auth')->name('issuing_card');
-Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->middleware('auth')->name('my_card');
-Route::resource('addresses', AddressController::class)->middleware('auth');
-Route::resource('orders', OrderController::class)->middleware('auth');
+Route::post('/issuing-card', [IssuingCardController::class, 'create'])->name('issuing_card');
+Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->name('my_card');
+Route::resource('addresses', AddressController::class);
+Route::resource('orders', OrderController::class);
 
 Auth::routes();
 

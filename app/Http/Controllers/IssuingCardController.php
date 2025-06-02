@@ -11,6 +11,10 @@ use Stripe\Issuing\Cardholder;
 
 class IssuingCardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function create(Request $request)
     {
         $request->validate([
