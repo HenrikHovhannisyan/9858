@@ -40,4 +40,7 @@ Route::get('/my-card', [IssuingCardController::class, 'showCardDetails'])->name(
 Route::resource('addresses', AddressController::class);
 Route::resource('orders', OrderController::class);
 
+Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'isAdmin'], 'namespace' => '\App\Http\Controllers\Admin'], function () {
+    Route::get('/', 'HomeController@index')->name('admin.dashboard');
+});
 Auth::routes();

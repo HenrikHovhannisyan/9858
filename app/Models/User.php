@@ -25,6 +25,7 @@ class User extends Authenticatable
         'password',
         'address_unique_id',
         'cardholder_id',
+        'role',
     ];
 
     /**
@@ -57,5 +58,15 @@ class User extends Authenticatable
 
             $user->address_unique_id = $randomId;
         });
+    }
+
+    /**
+     * Проверяет, является ли пользователь администратором.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
     }
 }

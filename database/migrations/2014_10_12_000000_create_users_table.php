@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('address_unique_id')->nullable();
             $table->string('cardholder_id')->nullable();
+            $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
