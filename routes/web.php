@@ -6,8 +6,9 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\IssuingCardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use Illuminate\Support\Facades\Auth;
-use \App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +45,6 @@ Route::resource('orders', OrderController::class);
 Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'isAdmin'], 'namespace' => '\App\Http\Controllers\Admin'], function () {
     Route::get('/', 'HomeController@index')->name('admin.dashboard');
     Route::resource('users', UserController::class);
+    Route::resource('order', AdminOrderController::class);
 });
 Auth::routes();

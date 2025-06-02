@@ -97,7 +97,7 @@ legend {
     border-color: #4a4458;
 }
 
-nav {
+nav.navbar {
     background-color: #141218;
 }
 
@@ -1296,9 +1296,6 @@ footer ul {
     color: #141218;
 }
 
-#orders nav {
-    background-color: transparent;
-}
 #orders nav a {
     color: #141218 !important;
 }

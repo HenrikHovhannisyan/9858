@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Models\User;
+use \App\Models\Order;
 
-class UserController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::latest()->paginate(10);
-        return view('pages.admin.users.index', compact('users'))
+        $orders = Order::with('user')->paginate(10);
+        return view('pages.admin.orders.index', compact('orders'))
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
