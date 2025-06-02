@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\User;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.index');
+        $totalUsers = count(User::all());
+        $totalOrders = count(Order::all());
+        return view('pages.admin.index', compact('totalUsers', 'totalOrders'));
     }
 }

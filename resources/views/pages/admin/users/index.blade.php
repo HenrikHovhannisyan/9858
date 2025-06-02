@@ -6,7 +6,7 @@
         <div class="col-md-3">
             @include('pages.admin.sidebar')
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 border p-3 mb-3 admin_dashboard">
             <h1 class="mb-4">Users</h1>
             <table class="table table-bordered table-hover">
                 <thead>

@@ -2404,3 +2404,7 @@ footer ul {
     width: 100%;
     max-width: 320px;
 }
+
+.admin_dashboard {
+    min-height: calc(100vh - 355px);
+}
