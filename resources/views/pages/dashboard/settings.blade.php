@@ -176,7 +176,7 @@
                                         @csrf
 
                                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
-                                        <textarea name="message" class="form-control mb-3" placeholder="Message"></textarea>
+                                        <textarea name="message" class="form-control mb-3" rows="7" placeholder="Message"></textarea>
 
                                         <div class="mb-3">
                                             <input type="file" class="d-none" name="file" id="fileInput" value="">
