@@ -2400,9 +2400,15 @@ footer ul {
     border-color: #4a4458;
 }
 
+#shop_slider {
+    background-color: #141218;
+}
+
 #shop_slider .owl-carousel .owl-item img {
     width: 100%;
     max-width: 320px;
+    margin: 0 auto;
+    border-radius: unset;
 }
 
 .admin_dashboard {
