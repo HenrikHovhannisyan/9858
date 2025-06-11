@@ -90,3 +90,35 @@ owl.owlCarousel({
         },
     },
 });
+
+function copySingle(button) {
+    const value = button.parentElement
+        .querySelector(".copy-value")
+        ?.textContent.trim();
+    if (value) {
+        navigator.clipboard.writeText(value).then(() => {
+            showToast(`Copied: ${value}`);
+        });
+    }
+}
+
+function copyAll() {
+    const values = Array.from(document.querySelectorAll(".copy-value"))
+        .map((span) => span.textContent.trim())
+        .join("\n");
+
+    if (values) {
+        navigator.clipboard.writeText(values).then(() => {
+            showToast("All address data copied!");
+        });
+    }
+}
+
+function showToast(message) {
+    const toastMessage = document.getElementById("toastMessage");
+    toastMessage.textContent = message;
+
+    const toastEl = document.getElementById("copyToast");
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+}

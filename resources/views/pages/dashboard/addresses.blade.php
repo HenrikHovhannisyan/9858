@@ -33,27 +33,52 @@
                         <div class="address_card">
                             <h3>Your address</h3>
                             <h4>Enter this address as your shipping address when shopping from the US online shops.</h4>
-                            <p>
-                                Address 1: 123 Main St
-                            </p>
-                            <p>
-                                Address 2: {{ Auth::user()->address_unique_id }}
-                            </p>
-                            <p>
-                                City: Any Town
-                            </p>
-                            <p>
-                                State: CA
-                            </p>
-                            <p>
-                                Zip Code: 12345
-                            </p>
-                            <p>
-                                Country: United States
-                            </p>
-                            <p>
-                                Phone Number: 123-456-7890
-                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">Address 1: <span class="copy-value">123 Main St</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">Address 2: <span class="copy-value">{{ Auth::user()->address_unique_id }}</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">City: <span class="copy-value">Any Town</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">State: <span class="copy-value">CA</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">Zip Code: <span class="copy-value">12345</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">Country: <span class="copy-value">United States</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                <p class="mb-0">Phone Number: <span class="copy-value">123-456-7890</span></p>
+                                <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
+                            </div>
+
+                            <button class="btn btn-outline-dark mt-3" onclick="copyAll()">Copy All</button>
+                        </div>
+
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer">
+                            <div id="copyToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                    <div class="toast-body" id="toastMessage">Copied!</div>
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
