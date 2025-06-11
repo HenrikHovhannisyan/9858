@@ -30,12 +30,14 @@ class OrderController extends Controller
             'product_name' => 'required|string|max:255',
             'product_price' => 'required|numeric|min:0',
             'shipping_method' => 'required|string|max:255',
+            'tracking_number' => 'required|string|max:255',
         ]);
         $order = Order::create([
             'user_id' => Auth::id(),
             'product_name' => $request->product_name,
             'product_price' => $request->product_price,
             'shipping_method' => $request->shipping_method,
+            'tracking_number' => $request->tracking_number,
         ]);
         return redirect()->route('orders.index')->with('success', 'Order created successfully!');
     }
@@ -59,8 +61,9 @@ class OrderController extends Controller
             'product_name' => 'required|string|max:255',
             'product_price' => 'required|numeric|min:0',
             'shipping_method' => 'required|string|max:255',
+            'tracking_number' => 'required|string|max:255',
         ]);
-        $order->update($request->only(['product_name', 'product_price', 'shipping_method']));
+        $order->update($request->only(['product_name', 'product_price', 'shipping_method', '']));
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filename = time() . '_' . $file->getClientOriginalName();

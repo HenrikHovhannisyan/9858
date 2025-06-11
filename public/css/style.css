@@ -2414,3 +2414,7 @@ footer ul {
 .admin_dashboard {
     min-height: calc(100vh - 355px);
 }
+
+#myTab .nav-link.text-dark.active {
+    font-weight: bold;
+}

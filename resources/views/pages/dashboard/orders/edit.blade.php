@@ -48,6 +48,9 @@
                                     <div class="col-lg-6 mb-3">
                                         <input type="number" step="0.01" class="form-control" name="product_price" required value="{{ old('product_price', $order->product_price) }}" placeholder="Price">
                                     </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" name="tracking_number" required value="{{ old('tracking_number', $order->tracking_number) }}" placeholder="Tracking number">
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <input type="file" class="d-none" name="file" id="fileInput">

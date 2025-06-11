@@ -60,7 +60,7 @@
                                 </td>
                                 <td>{{ $order->created_at->format('d.m.Y') }}</td>
                                 <td>
-                                    <span class="d-inline-flex px-2 py-1 fw-semibold
+                                    <span class="d-inline-flex px-2 py-1 fw-semibold w-100 justify-content-center align-items-center
                                     @if($order->status === 'Pending')
                                         text-warning-emphasis bg-warning-subtle border border-warning-subtle
                                     @elseif($order->status === 'In Transit')

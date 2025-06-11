@@ -19,21 +19,6 @@ class Order extends Model
         'file',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($order) {
-            if (empty($order->tracking_number)) {
-                $order->tracking_number = self::generateTrackingNumber();
-            }
-        });
-    }
-
-    public static function generateTrackingNumber()
-    {
-        return strtoupper(bin2hex(random_bytes(5)));
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
