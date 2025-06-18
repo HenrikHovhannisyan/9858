@@ -29,7 +29,7 @@
                                 <i class="fa fa-box-open me-2"></i>
                                 Total Orders - {{ $totalOrders }}
                             </h5>
-                            <a href="{{ route('order.index') }}" class="btn btn-dark btn-block mt-3">View Users</a>
+                            <a href="{{ route('order.index') }}" class="btn btn-dark btn-block mt-3">View Orders</a>
                         </div>
                     </div>
                 </div>

@@ -69,4 +69,14 @@ class User extends Authenticatable
     {
         return $this->role === 'admin';
     }
+
+    /**
+     * Проверяет, является ли пользователь администратором.
+     *
+     * @return bool
+     */
+    public function isWarehouse()
+    {
+        return $this->role === 'warehouse';
+    }
 }

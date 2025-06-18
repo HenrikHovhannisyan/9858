@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
+use App\Http\Controllers\Warehouse\OrderController as WarehouseOrderController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -46,5 +47,10 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'isAdmin'], 'namesp
     Route::get('/', 'HomeController@index')->name('admin.dashboard');
     Route::resource('users', UserController::class);
     Route::resource('order', AdminOrderController::class);
+});
+
+Route::group(['prefix' => '/warehouse', 'middleware' => ['auth', 'isWarehouse'], 'namespace' => '\App\Http\Controllers\Warehouse'], function () {
+    Route::get('/', 'HomeController@index')->name('warehouse.dashboard');
+    Route::resource('w-order', WarehouseOrderController::class);
 });
 Auth::routes();
