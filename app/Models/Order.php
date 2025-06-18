@@ -17,6 +17,8 @@ class Order extends Model
         'shipping_method',
         'status',
         'file',
+        'total_price',
+        'whole',
     ];
 
     public function user()

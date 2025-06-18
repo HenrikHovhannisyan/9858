@@ -41,6 +41,7 @@
                                 <th>Shipping Method</th>
                                 <th>Added</th>
                                 <th>Status</th>
+                                <th>Total Price</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -71,6 +72,13 @@
                                     rounded-pill">
                                         {{ $order->status }}
                                     </span>
+                                </td>
+                                <td>
+                                    @if($order->total_price)
+                                        ${{ $order->total_price }}
+                                    @else
+                                        $0
+                                    @endif
                                 </td>
                                 <td>
                                     <a href="{{ route('orders.edit', $order) }}" class="btn btn-sm">
