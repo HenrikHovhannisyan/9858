@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class OrderController extends Controller
 {
@@ -30,15 +31,22 @@ class OrderController extends Controller
             'product_name' => 'required|string|max:255',
             'product_price' => 'required|numeric|min:0',
             'shipping_method' => 'required|string|max:255',
-            'tracking_number' => 'required|string|max:255',
+            'tracking_number' => 'required|string|max:255|unique:orders,tracking_number',
+            'file' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
         ]);
-        $order = Order::create([
-            'user_id' => Auth::id(),
-            'product_name' => $request->product_name,
-            'product_price' => $request->product_price,
-            'shipping_method' => $request->shipping_method,
-            'tracking_number' => $request->tracking_number,
-        ]);
+
+        $data = $request->only(['product_name', 'product_price', 'shipping_method', 'tracking_number']);
+        $data['user_id'] = Auth::id();
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('invoices', $filename, 'public');
+            $data['file'] = $path;
+        }
+
+        Order::create($data);
+
         return redirect()->route('orders.index')->with('success', 'Order created successfully!');
     }
 
@@ -57,29 +65,47 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
         $this->authorizeOrder($order);
+
         $request->validate([
             'product_name' => 'required|string|max:255',
             'product_price' => 'required|numeric|min:0',
             'shipping_method' => 'required|string|max:255',
-            'tracking_number' => 'required|string|max:255',
+            'tracking_number' => 'required|string|max:255|unique:orders,tracking_number,' . $order->id,
+            'file' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
         ]);
-        $order->update($request->only(['product_name', 'product_price', 'shipping_method', '']));
+
+        $order->update($request->only(['product_name', 'product_price', 'shipping_method', 'tracking_number']));
+
         if ($request->hasFile('file')) {
+            if ($order->file && Storage::disk('public')->exists($order->file)) {
+                Storage::disk('public')->delete($order->file);
+            }
+
             $file = $request->file('file');
             $filename = time() . '_' . $file->getClientOriginalName();
             $path = $file->storeAs('invoices', $filename, 'public');
             $order->file = $path;
             $order->save();
         }
+
         return redirect()->route('orders.index')->with('success', 'Order updated successfully!');
     }
+
+
 
     public function destroy(Order $order)
     {
         $this->authorizeOrder($order);
+
+        if ($order->file && Storage::disk('public')->exists($order->file)) {
+            Storage::disk('public')->delete($order->file);
+        }
+
         $order->delete();
+
         return redirect()->route('orders.index')->with('success', 'Order deleted successfully!');
     }
+
 
     private function authorizeOrder(Order $order)
     {

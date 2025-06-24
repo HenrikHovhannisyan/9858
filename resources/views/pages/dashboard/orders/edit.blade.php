@@ -9,6 +9,15 @@
         </div>
         <div class="col-lg-10">
             <section id="edit_parcel" class="user_dashboard">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <h2>Edit Parcel</h2>
                 <form action="{{ route('orders.update', $order) }}" method="POST" enctype="multipart/form-data">
                     @csrf

@@ -9,11 +9,20 @@
         </div>
         <div class="col-lg-10">
             <section id="add_parcel" class="user_dashboard">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <h2 class="mb-4">Add Parcel</h2>
                 <p>
                     Please fill in all fields.
                 </p>
-                <form action="{{ route('orders.store') }}" method="POST">
+                <form action="{{ route('orders.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6">

@@ -25,4 +25,14 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getPricePerKgAttribute()
+    {
+        return $this->shipping_method === 'express' ? 100 : 50;
+    }
+
+    public function calculateTotalPrice($weight)
+    {
+        return $weight * $this->price_per_kg;
+    }
 }

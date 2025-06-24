@@ -48,7 +48,8 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::with('user')->findOrFail($id);
+        return view('pages.warehouse.orders.show', compact('order'));
     }
 
     /**
@@ -59,7 +60,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order = Order::with('user')->findOrFail($id);
+        return view('pages.warehouse.orders.edit', compact('order'));
     }
 
     /**
@@ -71,8 +73,22 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $order = Order::findOrFail($id);
+
+        $request->validate([
+            'whole' => 'required|numeric|min:0',
+            'total_price' => 'required|numeric|min:0',
+        ]);
+
+        $order->update([
+            'whole' => $request->whole,
+            'total_price' => $request->total_price,
+            'status' => 'In Transit'
+        ]);
+
+        return redirect()->route('w-order.index')->with('success', 'Order updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.

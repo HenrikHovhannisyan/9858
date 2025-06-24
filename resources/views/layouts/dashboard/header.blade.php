@@ -27,11 +27,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center justify-content-center gap-2" href="#">
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <img src="{{ asset('img/icons/avatar.png') }}" class="img-fluid" alt="avatar">
                             {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
                         </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->role === 'warehouse')
+                                <a class="dropdown-item text-dark" href="{{ route('warehouse.dashboard') }}">
+                                    {{ __('Warehouse') }}
+                                </a>
+                            @endif
+                            <a class="dropdown-item text-dark" href="{{ route('orders.index') }}">
+                                {{ __('Dashboard') }}
+                            </a>
+                            <a class="dropdown-item text-dark" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
                     </li>
                 </ul>
             </div>

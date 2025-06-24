@@ -52,6 +52,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->role === 'warehouse')
+                                <a class="dropdown-item text-dark" href="{{ route('warehouse.dashboard') }}">
+                                    {{ __('Warehouse') }}
+                                </a>
+                            @endif
                             <a class="dropdown-item text-dark" href="{{ route('orders.index') }}">
                                 {{ __('Dashboard') }}
                             </a>
