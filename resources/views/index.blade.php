@@ -206,7 +206,7 @@
 
 <!-- Start Dress -->
 <section id="dress">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 p-0">
                 <div class="text-center">

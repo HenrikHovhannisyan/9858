@@ -37,7 +37,7 @@
 <section id="shop_slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme owl-carousel_shop">
                 @for($i=1; $i<=5; $i++)
                     <div class="item">
                         <img src="{{ asset('img/shop-slider/'.$i.'.png') }}" alt="search result" class="img-fluid">

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-var owl = $(".owl-carousel");
+var owl = $(".owl-carousel_shop");
 owl.owlCarousel({
     items: 5,
     loop: true,
