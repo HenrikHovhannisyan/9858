@@ -24,10 +24,10 @@
                         <a href="{{ route('about') }}">About</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#">Contact</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#">Privacy Policy</a>
+                        <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
