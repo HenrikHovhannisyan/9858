@@ -122,3 +122,9 @@ function showToast(message) {
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
 }
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
+});

@@ -2418,3 +2418,31 @@ footer ul {
 #myTab .nav-link.text-dark.active {
     font-weight: bold;
 }
+
+.faq-item:first-child {
+    border-top: 2px solid #0000000f;
+}
+
+.faq-item {
+    border-bottom: 2px solid #0000000f;
+    cursor: pointer;
+}
+.faq-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.faq-answer {
+    display: none;
+    text-align: left;
+}
+.faq-item.active .faq-answer {
+    display: block;
+}
+.faq-item .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+.faq-item.active .fa-chevron-down {
+    transform: rotate(180deg);
+}

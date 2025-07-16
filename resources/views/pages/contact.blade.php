@@ -21,11 +21,57 @@
 <section id="our-concierge">
     <div class="container-fluid">
         <h2>Frequently asked questions</h2>
-        <p>How do I use your U.S. shipping address?</p>
-        <p>Can I request multiple deliveries at once?</p>
-        <p>Do you ship pets internationally?</p>
-        <p>How long does it take for items to arrive?</p>
-        <p>Can I talk to a live concierge?</p>
+        <div class="faq-section">
+        <div class="faq-item">
+            <div class="faq-question">
+            <p class="border-top-0">How do I use your U.S. shipping address?</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+            <p>After signing up, you'll receive a personal U.S. address. Use it at checkout when shopping from American stores.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <p class="border-top-0">Can I request multiple deliveries at once?</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+            <p>Yes, you can consolidate items and request multiple shipments from your dashboard.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <p class="border-top-0">Do you ship pets internationally?</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+            <p>Unfortunately, we do not offer pet shipping services at this time.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <p class="border-top-0">How long does it take for items to arrive?</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+            <p>Delivery time depends on the destination and shipping method, typically 7–14 business days.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <p class="border-top-0">Can I talk to a live concierge?</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+            <p>Yes! Our support team is available via chat and phone during business hours.</p>
+            </div>
+        </div>
+        </div>
     </div>
 </section>
 <!-- End Frequently asked questions -->
