@@ -86,7 +86,7 @@
 <section id="freight_forwarding_services">
     <div class="container-fluid" id="deserve_container">
         <h2 class="deserve_title">
-            Freight Forwarding ervices
+            Freight Forwarding Services
         </h2>
         <p class="deserve_text">
             In addition to our white-glove luxury concierge service, we offer premium freight forwarding to make international shopping effortless. Simply order your merchandise online and have it delivered to our U.S. address, and we will expertly handle the shipment to your destination with care and efficiency. Whether it’s a single luxury item, a bulk shipment, or even a hand-delivered pet, we ensure timely and secure delivery.
