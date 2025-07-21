@@ -16,6 +16,7 @@ return new class extends Migration
             $table->decimal('product_price', 10, 2);
             $table->string('shipping_method');
             $table->enum('status', ['Pending', 'In Transit', 'Delivered'])->default('Pending');
+            $table->enum('payment', ['yes', 'no'])->default('no');
             $table->string('file')->nullable();
             $table->string('total_price')->nullable();
             $table->string('whole')->nullable();

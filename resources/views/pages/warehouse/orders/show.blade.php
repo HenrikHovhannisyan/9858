@@ -12,6 +12,7 @@
             <p><strong>User:</strong> {{ $order->user->first_name ?? '-' }}</p>
             <p><strong>Tracking Number:</strong> {{ $order->tracking_number }}</p>
             <p><strong>Status:</strong> {{ $order->status }}</p>
+            <p><strong>Payment:</strong> {{ ucfirst($order->payment) }}</p>
             <p><strong>Product:</strong> {{ $order->product_name }} - ${{ $order->product_price }}</p>
             <p><strong>Shipping Method:</strong> {{ $order->shipping_method }}</p>
             <p><strong>Created:</strong> {{ $order->created_at->format('d.m.Y H:i') }}</p>

@@ -33,7 +33,7 @@
                                             <input class="form-check-input" type="radio" name="shipping_method" id="express" value="express" {{ old('shipping_method', $order->shipping_method) == 'express' ? 'checked' : '' }} required>
                                             <label class="form-check-label d-flex align-items-center" for="express">
                                                 <img src="{{ asset('img/icons/express.png') }}" alt="Express" style="height:64px;vertical-align:middle;margin-right:8px;">
-                                                <p>USA express <br> 1kg - $120</p>
+                                                <p>USA express <br> 1kg - $100</p>
                                             </label>
                                         </div>
                                     </div>

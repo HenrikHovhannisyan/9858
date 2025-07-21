@@ -36,7 +36,7 @@
                                             <label class="form-check-label d-flex align-items-center" for="express">
                                                 <img src="{{ asset('img/icons/express.png') }}" alt="Express" style="height:64px;vertical-align:middle;margin-right:8px;">
                                                 <p>
-                                                    USA express <br> 1kg - $120
+                                                    USA express <br> 1kg - $100
                                                 </p>
                                             </label>
                                         </div>

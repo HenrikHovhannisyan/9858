@@ -29,6 +29,8 @@
                         <th>Tracking Number</th>
                         <th>Status</th>
                         <th>Created At</th>
+                        <th>Payment</th>
+                        <th>Send</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -41,6 +43,26 @@
                         <td class="tracking-number">{{ $order->tracking_number }}</td>
                         <td class="text-capitalize">{{ $order->status }}</td>
                         <td>{{ $order->created_at->format('d.m.Y') }}</td>
+                        <td>
+                            @if($order->payment === 'no')
+                                <span class="text-danger">No</span>
+                            @else
+                                <span class="text-success">Yes</span>
+                            @endif
+                        </td>
+                        <td>
+                            @if($order->status === 'Pending')
+                                <form action="{{ route('w-order.transit', $order->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('PUT')
+                                    <button class="btn btn-success" {{ $order->payment === 'yes' ? '' : 'disabled' }}>
+                                        Send
+                                    </button>
+                                </form>
+                            @elseif($order->status === 'In Transit')
+                            <p class="text-success">Sent</p>
+                            @endif
+                        </td>
                         <td>
                             <a href="{{ route('w-order.show', $order->id) }}" class="btn btn-sm btn-primary">Show</a>
                             <a href="{{ route('w-order.edit', $order->id) }}" class="btn btn-sm btn-warning">Edit</a>

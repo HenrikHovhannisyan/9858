@@ -35,7 +35,7 @@
                             <h4>Enter this address as your shipping address when shopping from the US online shops.</h4>
 
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-                                <p class="mb-0">Address 1: <span class="copy-value">123 Main St</span></p>
+                                <p class="mb-0">Address 1: <span class="copy-value">406 Fifth Avenue</span></p>
                                 <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
                             </div>
 
@@ -45,17 +45,17 @@
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-                                <p class="mb-0">City: <span class="copy-value">Any Town</span></p>
+                                <p class="mb-0">City: <span class="copy-value">Brooklyn</span></p>
                                 <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-                                <p class="mb-0">State: <span class="copy-value">CA</span></p>
+                                <p class="mb-0">State: <span class="copy-value">NY</span></p>
                                 <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-                                <p class="mb-0">Zip Code: <span class="copy-value">12345</span></p>
+                                <p class="mb-0">Zip Code: <span class="copy-value">11215</span></p>
                                 <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
                             </div>
 
@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-                                <p class="mb-0">Phone Number: <span class="copy-value">123-456-7890</span></p>
+                                <p class="mb-0">Phone Number: <span class="copy-value">718-499-0043</span></p>
                                 <button class="btn btn-sm btn-outline-dark" onclick="copySingle(this)">Copy</button>
                             </div>
 

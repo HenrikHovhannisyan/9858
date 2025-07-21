@@ -9,6 +9,7 @@
         </div>
         <div class="col-md-9 border p-4">
             <h2>Edit Order #{{ $order->id }}</h2>
+            <h3>Product Price - {{ $order->product_price }}$</h3>
 
             <form action="{{ route('w-order.update', $order->id) }}" method="POST" id="orderForm">
                 @csrf

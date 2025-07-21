@@ -51,6 +51,8 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'isAdmin'], 'namesp
 
 Route::group(['prefix' => '/warehouse', 'middleware' => ['auth', 'isWarehouse'], 'namespace' => '\App\Http\Controllers\Warehouse'], function () {
     Route::get('/', 'HomeController@index')->name('warehouse.dashboard');
+    Route::put('/warehouse/orders/{id}/payment', [WarehouseOrderController::class, 'updatePayment'])->name('w-order.payment');
+    Route::put('/warehouse/orders/{id}/transit', [WarehouseOrderController::class, 'markInTransit'])->name('w-order.transit');
     Route::resource('w-order', WarehouseOrderController::class);
 });
 Auth::routes();

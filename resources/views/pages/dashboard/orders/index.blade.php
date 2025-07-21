@@ -41,7 +41,7 @@
                                 <th>Shipping Method</th>
                                 <th>Added</th>
                                 <th>Status</th>
-                                <th>Total Price</th>
+                                <th>Payment</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -74,10 +74,14 @@
                                     </span>
                                 </td>
                                 <td>
-                                    @if($order->total_price)
-                                        ${{ $order->total_price }}
+                                    @if($order->total_price > 0 && $order->payment === 'no')
+                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#paymentModal-{{ $order->id }}">
+                                            Mark as Paid
+                                        </button>
+                                    @elseif($order->status === 'In Transit')
+                                        <span class="text-success">Yes</span>
                                     @else
-                                        $0
+                                        <span class="text-danger">Yes</span>
                                     @endif
                                 </td>
                                 <td>
@@ -93,9 +97,35 @@
                                     </form>
                                 </td>
                             </tr>
+                            <!-- Modal -->
+                            <div class="modal fade" id="paymentModal-{{ $order->id }}" tabindex="-1" aria-labelledby="paymentModalLabel-{{ $order->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <form action="{{ route('w-order.payment', $order->id) }}" method="POST">
+                                    @csrf
+                                    @method('PUT')
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="paymentModalLabel-{{ $order->id }}">
+                                            Confirm Payment - {{ $order->total_price }}$
+                                        </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p class="mb-3">Are you sure you want to pay for this order?</p>
+                                    <p><strong>Tracking Number:</strong> #{{ $order->tracking_number }}</p>
+                                    <p><strong>Transportation amount:</strong> <span class="text-danger">{{ $order->total_price }}$</span></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-success">Mark as Paid</button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                            </div>
                             @empty
                             <tr>
-                                <td colspan="8" class="text-center p-5">
+                                <td colspan="9" class="text-center p-5">
                                     <p class="mb-3">(You have no parcels yet)</p>
                                     <img src="{{ asset('img/no_orders.png') }}" alt="No Orders" class="img-fluid m-auto" />
                                 </td>
@@ -111,6 +141,7 @@
         </div>
     </div>
 </div>
+
 @endsection
 <script>
     document.addEventListener('DOMContentLoaded', function() {

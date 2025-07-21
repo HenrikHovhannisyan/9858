@@ -80,10 +80,11 @@ class OrderController extends Controller
             'total_price' => 'required|numeric|min:0',
         ]);
 
+        $totalPrice = $request->total_price + 130;
+
         $order->update([
             'whole' => $request->whole,
-            'total_price' => $request->total_price,
-            'status' => 'In Transit'
+            'total_price' => $totalPrice,
         ]);
 
         return redirect()->route('w-order.index')->with('success', 'Order updated successfully.');
@@ -99,5 +100,28 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function updatePayment($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->payment = 'yes';
+        $order->save();
+
+        return redirect()->back()->with('success', 'Payment status updated.');
+    }
+
+    public function markInTransit($id)
+    {
+        $order = Order::findOrFail($id);
+
+        if ($order->total_price > 0) {
+            $order->status = 'In Transit';
+            $order->save();
+
+            return redirect()->back()->with('success', 'Order status updated to In Transit.');
+        }
+
+        return redirect()->back()->with('error', 'Cannot mark as In Transit without total price.');
     }
 }
