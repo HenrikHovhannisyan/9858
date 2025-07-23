@@ -169,7 +169,7 @@
             </div>
             <div class="col-md-6 p-0">
                 <div class="who_we_are_left">
-                    <img src="{{ asset('img/watch.png') }}" alt="watch" class="img-fluid">
+                    <img src="{{ asset('img/watch.png') }}" alt="watch" class="img-fluid ms-auto">
                 </div>
             </div>
         </div>
