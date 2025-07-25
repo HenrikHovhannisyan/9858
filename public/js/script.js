@@ -128,3 +128,31 @@ document.querySelectorAll(".faq-item").forEach((item) => {
         item.classList.toggle("active");
     });
 });
+
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
+        const form = this;
+
+        emailjs.sendForm("service_1v5btnj", "template_yko1egr", form).then(
+            function (response) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Message sent successfully!",
+                    showConfirmButton: true,
+                    confirmButtonText: "Close",
+                });
+
+                form.reset();
+            },
+            function (error) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to send",
+                    text: JSON.stringify(error),
+                    confirmButtonText: "Close",
+                });
+            }
+        );
+    });

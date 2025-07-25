@@ -86,12 +86,12 @@
                     <p>
                         Fill out the form below, and a dedicated concierge team member will respond within hours.
                     </p>
-                    <form action="" method="POST">
+                    <form id="contact-form">
                         <input type="text" class="form-control mb-3" name="name" placeholder="Full Name" required>
                         <input type="email" class="form-control mb-4" name="email" placeholder="Email Address" required>
                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
                         <textarea name="message" class="form-control mb-3" placeholder="Message" required></textarea>
-                        <div class="mb-3">
+{{--                         <div class="mb-3">
                             <input type="file" class="d-none" name="file" id="fileInput" value="">
                             <div class="attach_file">
                                 <p>
@@ -101,7 +101,7 @@
                                     Attach a file
                                 </span>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="mt-5 text-end">
                             <button type="submit" class="btn btn_dark">Send</button>
                         </div>
