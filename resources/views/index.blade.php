@@ -34,7 +34,7 @@
                         Who We Are
                     </h2>
                     <p class="who_we_are_text">
-                        At [Your Company Name], we redefine luxury logistics by offering elite concierge export services.  We curate and deliver the most sought-after designer pieces—from handbags and fragrances to timepieces and jewelry—along with personal shopping and even pet delivery.
+                        At Untoldfreightconcierge, we redefine luxury logistics by offering elite concierge export services.  We curate and deliver the most sought-after designer pieces—from handbags and fragrances to timepieces and jewelry—along with personal shopping and even pet delivery.
                         <br>
                         Our clients trust us for our discretion, white-glove service, and global reach.
                     </p>

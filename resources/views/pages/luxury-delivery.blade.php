@@ -32,7 +32,7 @@
             The Standard You Deserve
         </h2>
         <p class="deserve_text">
-            At [Your Company Name], delivery isn’t the final step—it’s a core part of the luxury experience.
+            At Untoldfreightconcierge, delivery isn’t the final step—it’s a core part of the luxury experience.
         </p>
         <p class="deserve_text">
             We specialize in the secure, discreet, and personalized transport of high-value goods—from designer handbags and fine jewelry to premium fragrances and hand-delivered pets.
@@ -228,7 +228,7 @@
                 Ready for a delivery experience that matches the value of what you buy?
             </h1>
             <p class="banner_text text-dark">
-                Trust [Your Company Name] to deliver luxury—your way.
+                Trust Untoldfreightconcierge to deliver luxury—your way.
             </p>
             <div class="d-block d-md-flex align-items-center justify-content-center gap-2">
                 <a href="#" class="btn_dark">
