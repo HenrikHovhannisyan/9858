@@ -48,7 +48,7 @@
             <i class="fa-solid fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-            <p>Unfortunately, we do not offer pet shipping services at this time.</p>
+            <p>Yes, we do offer international shipping for small pets (such as dogs and cats), but only when they are accompanied by an adult companion.</p>
             </div>
         </div>
 

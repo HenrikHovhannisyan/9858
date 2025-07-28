@@ -27,7 +27,7 @@
             Our Untold And Unfolded Story
         </p>
         <p class="about_text">
-            At Untoldfreightconcierge, we redefine luxury by providing an elite export concierge service that delivers the world’s most coveted designer goods—and even small breed pets—from the U.S. to the Caribbean, South America, and Worldwide. Catering to clients who demand excellence, we ensure a seamless, secure, and personalized shopping experience for high-end handbags, premium fragrances, luxury eyewear, exquisite timepieces and jewelry, designer shoes, and now, hand-delivered small breed pets.
+            At Untold Freight Concierge LLC, we redefine luxury by providing an elite export concierge service that delivers the world’s most coveted designer goods—and even small breed pets—from the U.S. to the Caribbean, South America, and Worldwide. Catering to clients who demand excellence, we ensure a seamless, secure, and personalized shopping experience for high-end handbags, premium fragrances, luxury eyewear, exquisite timepieces and jewelry, designer shoes, and now, hand-delivered small breed pets.
         </p>
         <p class="about_text">
             We understand that luxury is not just about the products you buy, but the experience you have while purchasing them. That’s why we’ve introduced our Personal Shopper Service, where our expert team curates the finest selection tailored specifically to your tastes. Whether you're looking for a rare designer handbag or a bespoke piece of jewelry, your personal shopper is dedicated to finding exactly what you desire—no request is too grand. Let us do the shopping while you enjoy a curated collection of the best the world has to offer.
@@ -174,7 +174,7 @@
             </div>
         </div>
         <p class="about_why_choose_text">
-            At Untoldfreightconcierge, we bring the world of luxury to your doorstep. Whether through curated personal shopping, hand-delivered pets, or freight forwarding, we make global luxury more accessible.
+            At Untold Freight Concierge LLC, we bring the world of luxury to your doorstep. Whether through curated personal shopping, hand-delivered pets, or freight forwarding, we make global luxury more accessible.
         </p>
     </div>
 </section>

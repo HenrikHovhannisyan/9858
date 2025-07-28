@@ -11,7 +11,7 @@
             </h1>
             <h2>So Are We.</h2>
             <p>
-                At Untoldfreightconcierge, our Concierge Service is more than support—it’s a bespoke experience built around your needs. Whether you're sourcing rare luxury goods, hand-delivering a pet, or coordinating a multi-brand shipment, our team is here to manage every detail with care, discretion, and world-class service.
+                At Untold Freight Concierge LLC, our Concierge Service is more than support—it’s a bespoke experience built around your needs. Whether you're sourcing rare luxury goods, hand-delivering a pet, or coordinating a multi-brand shipment, our team is here to manage every detail with care, discretion, and world-class service.
             </p>
         </div>
     </div>

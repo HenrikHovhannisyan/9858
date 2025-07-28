@@ -11,7 +11,7 @@
             </h1>
             <h2>Last Updated</h2>
             <p>
-                At Untoldfreightconcierge, discretion isn’t just part of our service—it’s a promise. We are committed to protecting your personal data and ensuring your privacy across every interaction, from browsing to booking.
+                At Untold Freight Concierge LLC, discretion isn’t just part of our service—it’s a promise. We are committed to protecting your personal data and ensuring your privacy across every interaction, from browsing to booking.
             </p>
         </div>
     </div>
