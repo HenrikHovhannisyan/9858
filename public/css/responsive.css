@@ -48,13 +48,15 @@
     }
 
     .who_we_are_right,
+    #personal_shopper .promise_right,
     #promise .promise_right,
     #promise.promise_right,
     #luxury_gateway .promise_right {
         padding-left: unset;
     }
 
-       #contact_banner, #custom_packaging_banner,
+    #contact_banner,
+    #custom_packaging_banner,
     #packaging_apart,
     #packaging_options,
     #tailored_for_you,
@@ -127,7 +129,8 @@
         line-height: 72px;
     }
 
-       #contact_banner, #custom_packaging_banner {
+    #contact_banner,
+    #custom_packaging_banner {
         padding-top: 80px;
         padding-bottom: 100px;
     }
@@ -275,7 +278,8 @@
         width: 100%;
     }
 
-       #contact_banner, #custom_packaging_banner,
+    #contact_banner,
+    #custom_packaging_banner,
     #packaging_apart,
     #packaging_options,
     #tailored_for_you,
@@ -283,7 +287,8 @@
         margin-bottom: 80px;
     }
 
-       #contact_banner, #custom_packaging_banner {
+    #contact_banner,
+    #custom_packaging_banner {
         padding-top: 60px;
         padding-bottom: 80px;
     }
@@ -425,7 +430,8 @@
 }
 
 @media (max-width: 576px) {
-       #contact_banner, #custom_packaging_banner {
+    #contact_banner,
+    #custom_packaging_banner {
         padding-top: 40px;
         padding-bottom: 60px;
     }
@@ -542,7 +548,7 @@
     #need_personalized_assistance .contact_form .form-control {
         font-size: 14px;
         padding: 8px 10px;
-      }
+    }
 }
 
 @media (max-width: 480px) {

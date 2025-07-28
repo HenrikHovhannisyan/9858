@@ -37,7 +37,7 @@
 <!-- End About info -->
 
 <!-- Start Luxury concierge and exclusive sourcing -->
-<section id="promise">
+<section id="promise" class="mb-0">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
@@ -61,21 +61,19 @@
 <!-- Start Personal Shopper -->
 <section id="personal_shopper">
     <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="promise_right">
-                        <h2 class="promise_title">
-                            Personal Shopper
-                        </h2>
-                        <p class="promise_text">
-                            Whether you're searching for the perfect look for a special event, a full wardrobe refresh, or just the right pair of shoes and a bag to complement your outfit, our expert stylists will curate a personalized selection just for you.
-                        </p>
-                    </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="promise_right">
+                    <h2 class="promise_title">
+                        Personal Shopper
+                    </h2>
+                    <p class="promise_text">
+                        Whether you're searching for the perfect look for a special event, a full wardrobe refresh, or just the right pair of shoes and a bag to complement your outfit, our expert stylists will curate a personalized selection just for you.
+                    </p>
                 </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('img/personal_shopper.png') }}" alt="about women" class="img-fluid ms-auto">
-                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ asset('img/personal_shopper.png') }}" alt="about women" class="w-100">
             </div>
         </div>
     </div>
