@@ -113,6 +113,34 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="contact_info">
+            <h2 class="text-center">Contact Information</h2>
+            
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="https://www.google.com/maps/place/406+Fifth+Avenue,+Brooklyn,+NY+11215/@40.6781788,-73.9442499,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258890336293b:0x845977366747733!8m2!3d40.6781788!4d-73.9420612" target="_blank" class="btn_dark">
+                        <i class="fa fa-map-marker"></i>
+                    </a>
+                    <p class="mt-3">406 Fifth Avenue, Brooklyn, NY 11215.</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:17184990043" class="btn_dark">
+                        <i class="fa fa-phone"></i>
+                    </a>
+                    <p class="mt-3">(1-718) 499-0043</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="mailto:info@untoldfreight.com" class="btn_dark">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    <p class="mt-3">info@untoldfreight.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="col"></div>
 </section>
 <!-- End Need Personalized Assistance? -->
 

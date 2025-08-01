@@ -203,6 +203,10 @@ footer ul {
     color: #ffffff;
 }
 
+#bgPrivacyPolicy {
+    background-image: url("/img/bg_privacy_policy.png");
+}
+
 .privacy_policy_text {
     padding-top: 105px;
     text-align: center;
@@ -227,10 +231,6 @@ footer ul {
     letter-spacing: 0.1px;
     text-align: center;
     vertical-align: middle;
-}
-
-#banner {
-    background-color: #000000;
 }
 
 #index_banner {
@@ -992,11 +992,6 @@ footer ul {
 
 #need_custom a:hover {
     background: #332e3d;
-}
-
-#concierge_service_banner {
-    margin-top: 200px;
-    margin-bottom: 230px;
 }
 
 #concierge_service_banner > .banner_container {
@@ -1943,7 +1938,7 @@ footer ul {
 }
 
 #concierge_service_banner {
-    margin-top: 200px;
+    padding-top: 200px;
     margin-bottom: 230px;
 }
 
@@ -2301,7 +2296,13 @@ footer ul {
     margin-bottom: 160px;
 }
 
-#need_personalized_assistance h2 {
+.contact_info {
+    margin: auto;
+    margin-top: 80px;
+}
+
+#need_personalized_assistance h2,
+.contact_info h2 {
     font-family: Playfair Display;
     font-weight: 400;
     font-size: 64px;
@@ -2334,7 +2335,7 @@ footer ul {
 }
 
 #privacy_policy {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
 }
 
 #privacy_policy .privacy_policy_item {
