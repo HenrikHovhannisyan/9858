@@ -43,15 +43,6 @@
                                 <button class="nav-link" id="notifications-tab" data-bs-toggle="pill" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false">
                                     Notifications
                                 </button>
-                                <button class="nav-link" id="payment-methods-tab" data-bs-toggle="pill" data-bs-target="#payment-methods" type="button" role="tab" aria-controls="payment-methods" aria-selected="false">
-                                    Payment Methods
-                                </button>
-                                <button class="nav-link" id="shipping-addresses-tab" data-bs-toggle="pill" data-bs-target="#shipping-addresses" type="button" role="tab" aria-controls="shipping-addresses" aria-selected="false">
-                                    Shipping Addresses
-                                </button>
-                                <button class="nav-link" id="preferences-tab" data-bs-toggle="pill" data-bs-target="#preferences" type="button" role="tab" aria-controls="preferences" aria-selected="false">
-                                    Preferences
-                                </button>
                                 <button class="nav-link" id="support-tab" data-bs-toggle="pill" data-bs-target="#support" type="button" role="tab" aria-controls="support" aria-selected="false">
                                     Support
                                 </button>
@@ -145,30 +136,12 @@
                                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                                             </div>
                                         </div>
-                                        <div class="notifications border-top border-bottom">
-                                            <div class="box">
-                                                <h3>SMS Notifications</h3>
-                                                <p>Stay informed in real time with text alerts about shipment status, concierge messages, and time-sensitive updates..</p>
-                                            </div>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                                            </div>
-                                        </div>
 
                                         <div class="settings_profile_btn">
                                             <a href="{{ url()->previous() }}" class="btn btn_white">Cancel</a>
                                             <button type="submit" class="btn btn_dark">Save Changes</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="tab-pane fade" id="payment-methods" role="tabpanel" aria-labelledby="payment-methods-tab">
-                                    <h3>Payment Methods</h3>
-                                </div>
-                                <div class="tab-pane fade" id="shipping-addresses" role="tabpanel" aria-labelledby="shipping-addresses-tab">
-                                    <h3>Shipping Addresses</h3>
-                                </div>
-                                <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferences-tab">
-                                    <h3>Preferences</h3>
                                 </div>
                                 <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
                                     <h3>Support</h3>
@@ -177,18 +150,6 @@
 
                                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
                                         <textarea name="message" class="form-control mb-3" rows="7" placeholder="Message"></textarea>
-
-                                        <div class="mb-3">
-                                            <input type="file" class="d-none" name="file" id="fileInput" value="">
-                                            <div class="attach_file">
-                                                <p>
-                                                    No file (pdf, jpg, png)
-                                                </p>
-                                                <span id="attachFileBtn" style="cursor:pointer;">
-                                                    Attach a file
-                                                </span>
-                                            </div>
-                                        </div>
 
                                         <div class="settings_profile_btn">
                                             <a href="{{ url()->previous() }}" class="btn btn_white">Cancel</a>

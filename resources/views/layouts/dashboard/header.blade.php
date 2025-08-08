@@ -39,9 +39,6 @@
                                     {{ __('Warehouse') }}
                                 </a>
                             @endif
-                            <a class="dropdown-item text-dark" href="{{ route('orders.index') }}">
-                                {{ __('Dashboard') }}
-                            </a>
                             <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

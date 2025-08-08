@@ -91,17 +91,6 @@
                         <input type="email" class="form-control mb-4" name="email" placeholder="Email Address" required>
                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
                         <textarea name="message" class="form-control mb-3" placeholder="Message" required></textarea>
-{{--                         <div class="mb-3">
-                            <input type="file" class="d-none" name="file" id="fileInput" value="">
-                            <div class="attach_file">
-                                <p>
-                                    No file (pdf, jpg, png)
-                                </p>
-                                <span id="attachFileBtn" style="cursor:pointer;">
-                                    Attach a file
-                                </span>
-                            </div>
-                        </div> --}}
                         <div class="mt-5 text-end">
                             <button type="submit" class="btn btn_dark">Send</button>
                         </div>
