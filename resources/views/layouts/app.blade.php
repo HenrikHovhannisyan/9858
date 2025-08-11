@@ -38,7 +38,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function(){
-            emailjs.init("jujcwZeH9RuLbpllx"); // public key из EmailJS dashboard
+            emailjs.init("jujcwZeH9RuLbpllx");
         })();
     </script>
     <script src="{{ asset('js/script.js') }}"></script>

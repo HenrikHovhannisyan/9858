@@ -87,6 +87,7 @@
                         Fill out the form below, and a dedicated concierge team member will respond within hours.
                     </p>
                     <form id="contact-form">
+                        <input type="hidden" name="title" value="Contact Us">
                         <input type="text" class="form-control mb-3" name="name" placeholder="Full Name" required>
                         <input type="email" class="form-control mb-4" name="email" placeholder="Email Address" required>
                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>

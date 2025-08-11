@@ -2374,12 +2374,12 @@ footer ul {
     margin-bottom: 12px;
 }
 
-#support_form {
+.support_form {
     max-width: 574px;
 }
 
-#support_form .attach_file > p,
-#support_form .attach_file > span {
+.support_form .attach_file > p,
+.support_form .attach_file > span {
     font-family: Intrepid;
     font-weight: 5;
     font-size: 16px;

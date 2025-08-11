@@ -145,11 +145,14 @@
                                 </div>
                                 <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
                                     <h3>Support</h3>
-                                    <form action="" method="POST" id="support_form">
-                                        @csrf
+                                    <form class="support_form" id="contact-form">
+                                        <input type="hidden" name="title" value="Support">
+
+                                        <input type="hidden" class="form-control mb-3" name="name" value="{{ auth()->user()->first_name }}" required>
+                                        <input type="hidden" class="form-control mb-3" name="email" value="{{ auth()->user()->email }}" required>
 
                                         <input type="text" class="form-control mb-3" name="subject" placeholder="Subject" required>
-                                        <textarea name="message" class="form-control mb-3" rows="7" placeholder="Message"></textarea>
+                                        <textarea class="form-control mb-3" rows="7" name="message" placeholder="Message" required></textarea>
 
                                         <div class="settings_profile_btn">
                                             <a href="{{ url()->previous() }}" class="btn btn_white">Cancel</a>
