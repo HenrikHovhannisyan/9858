@@ -14,6 +14,44 @@
                 <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
                 <div class="row mb-3">
+                    <div class="col-12 my-2">
+                        <div class="d-block d-md-flex align-items-center gap-3">
+                                <p class="px-2 py-1 fw-semibold text-info-emphasis bg-warning-subtle border rounded border-warning-subtle">
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    Entered
+                                </p>
+                                <p class="d-none d-md-block">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </p>
+                                <p class="d-block d-md-none text-center my-2">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </p>
+                                <p class="px-2 py-1 fw-semibold text-info-emphasis bg-primary-subtle border rounded border-primary-subtle">
+                                    <i class="fa-solid fa-warehouse"></i>
+                                    In Warehouse
+                                </p>
+                                <p class="d-none d-md-block">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </p>
+                                <p class="d-block d-md-none text-center my-2">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </p>
+                                <p class="px-2 py-1 fw-semibold text-info-emphasis bg-info-subtle border rounded border-info-subtle">
+                                    <i class="fa-solid fa-plane"></i>
+                                    On the Way
+                                </p>
+                                <p class="d-none d-md-block">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </p>
+                                <p class="d-block d-md-none text-center my-2">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </p>
+                                <p class="px-2 py-1 fw-semibold text-info-emphasis bg-success-subtle border rounded border-success-subtle">
+                                    <i class="fa-solid fa-hand"></i>
+                                    Received
+                                </p>
+                        </div>
+                    </div>
                     <div class="col-lg-6 d-flex align-items-center">
                         <p>All items</p>
                     </div>
@@ -22,9 +60,10 @@
                             <a href="{{ route('orders.create') }}" class="btn_dark">+ Add Parcel</a>
                             <select class="form-select" id="statusFilter">
                                 <option value="">Filter</option>
-                                <option value="Pending">Pending</option>
-                                <option value="In Transit">In Transit</option>
-                                <option value="Delivered">Delivered</option>
+                                <option value="Entered">Entered</option>
+                                <option value="In Warehouse">In Warehouse</option>
+                                <option value="On the Way">On the Way</option>
+                                <option value="Received">Received</option>
                             </select>
                             <input type="text" class="form-control" id="productSearch" placeholder="Search by product name">
                         </div>
@@ -54,18 +93,26 @@
                                 <td>${{ $order->product_price }}</td>
                                 <td>
                                     @if($order->shipping_method === 'express')
-                                    <img src="{{ asset('img/icons/express.png') }}" alt="Express" width="24">
+                                    <p class="d-flex align-items-center gap-2">
+                                        <img src="{{ asset('img/icons/express.png') }}" alt="Express" width="24">
+                                        USA express
+                                    </p>
                                     @else
-                                    <img src="{{ asset('img/icons/standard.png') }}" alt="Standard" width="24">
+                                    <p class="d-flex align-items-center gap-2">
+                                        <img src="{{ asset('img/icons/standard.png') }}" alt="Standard" width="24">
+                                        USA standard
+                                    </p>
                                     @endif
                                 </td>
                                 <td>{{ $order->created_at->format('d.m.Y') }}</td>
                                 <td>
                                     <span class="d-inline-flex px-2 py-1 fw-semibold w-100 justify-content-center align-items-center
-                                    @if($order->status === 'Pending')
+                                    @if($order->status === 'Entered')
                                         text-warning-emphasis bg-warning-subtle border border-warning-subtle
-                                    @elseif($order->status === 'In Transit')
+                                    @elseif($order->status === 'In Warehouse')
                                         text-primary-emphasis bg-primary-subtle border border-primary-subtle
+                                    @elseif($order->status === 'On the Way')
+                                        text-info-emphasis bg-info-subtle border border-info-subtle
                                     @else
                                         text-success-emphasis bg-success-subtle border border-success-subtle
                                     @endif
@@ -76,12 +123,12 @@
                                 <td>
                                     @if($order->total_price > 0 && $order->payment === 'no')
                                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#paymentModal-{{ $order->id }}">
-                                            Mark as Paid
+                                            Pay - {{ $order->total_price }}$
                                         </button>
-                                    @elseif($order->status === 'In Transit')
-                                        <span class="text-success">Yes</span>
+                                    @elseif($order->status === 'On the Way')
+                                        <span class="text-success">Paid</span>
                                     @else
-                                        <span class="text-danger">Yes</span>
+                                        <span class="text-danger">Paid</span>
                                     @endif
                                 </td>
                                 <td>
@@ -113,6 +160,9 @@
                                     <div class="modal-body">
                                     <p class="mb-3">Are you sure you want to pay for this order?</p>
                                     <p><strong>Tracking Number:</strong> #{{ $order->tracking_number }}</p>
+                                    <p><strong>Whole:</strong> {{ $order->whole }}kg.</p>
+                                    <p><strong>Price for the whole:</strong> {{ $order->total_price - 130 }}$</p>
+                                    <p><strong>Price for services</strong> 130$</p>
                                     <p><strong>Transportation amount:</strong> <span class="text-danger">{{ $order->total_price }}$</span></p>
                                     </div>
                                     <div class="modal-footer">

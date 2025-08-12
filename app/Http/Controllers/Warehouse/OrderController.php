@@ -83,6 +83,7 @@ class OrderController extends Controller
         $totalPrice = $request->total_price + 130;
 
         $order->update([
+            'status' => 'In Warehouse',
             'whole' => $request->whole,
             'total_price' => $totalPrice,
         ]);
@@ -116,12 +117,12 @@ class OrderController extends Controller
         $order = Order::findOrFail($id);
 
         if ($order->total_price > 0) {
-            $order->status = 'In Transit';
+            $order->status = 'On the Way';
             $order->save();
 
-            return redirect()->back()->with('success', 'Order status updated to In Transit.');
+            return redirect()->back()->with('success', 'Order status updated to On the Way.');
         }
 
-        return redirect()->back()->with('error', 'Cannot mark as In Transit without total price.');
+        return redirect()->back()->with('error', 'Cannot mark as On the Way without total price.');
     }
 }

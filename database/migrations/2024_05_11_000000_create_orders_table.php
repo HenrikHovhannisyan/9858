@@ -13,9 +13,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('tracking_number')->unique();
             $table->string('product_name');
-            $table->decimal('product_price', 10, 2);
+            $table->string('product_price');
             $table->string('shipping_method');
-            $table->enum('status', ['Pending', 'In Transit', 'Delivered'])->default('Pending');
+            $table->enum('status', ['Entered', 'In Warehouse', 'On the Way', 'Received'])->default('Entered');
+
+
+
             $table->enum('payment', ['yes', 'no'])->default('no');
             $table->string('file')->nullable();
             $table->string('total_price')->nullable();

@@ -51,7 +51,7 @@
                             @endif
                         </td>
                         <td>
-                            @if($order->status === 'Pending')
+                            @if($order->status === 'Entered' || $order->status === 'In Warehouse')
                                 <form action="{{ route('w-order.transit', $order->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('PUT')
@@ -59,13 +59,15 @@
                                         Send
                                     </button>
                                 </form>
-                            @elseif($order->status === 'In Transit')
+                            @elseif($order->status === 'On the Way')
                             <p class="text-success">Sent</p>
                             @endif
                         </td>
                         <td>
                             <a href="{{ route('w-order.show', $order->id) }}" class="btn btn-sm btn-primary">Show</a>
-                            <a href="{{ route('w-order.edit', $order->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            @if($order->status !== 'On the Way' && $order->payment === 'no')
+                                <a href="{{ route('w-order.edit', $order->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            @endif
                         </td>
                     </tr>
                     @endforeach
