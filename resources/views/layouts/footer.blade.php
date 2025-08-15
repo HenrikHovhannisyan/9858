@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-fluid mb-3" src="{{ asset('img/logo.png') }}" alt="Logo">
+                <h2 class="text-white">
+                    Untold Freight Concierge
+                </h2>
             </div>
             <div class="col-lg-4 d-flex justify-content-lg-center">
                 <ul>

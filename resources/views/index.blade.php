@@ -38,7 +38,8 @@
                         <br>
                         Our clients trust us for our discretion, white-glove service, and global reach.
                     </p>
-                    <a href="#" class="btn_dark">
+                    <a href="{{ route('contact') }}" class="btn_dark">
+
                         Start Your Concierge Experience
                     </a>
                 </div>
@@ -144,57 +145,58 @@
             <div id="customers-testimonials" class="owl-carousel">
                 <div class="item">
                     <div class="shadow-effect">
-                        <p>
-                            “Lorem ipsum dolor sit amet consectetur. Faucibus quisque egestas ut ullamcorper facilisi sollicitudin lectus elit diam. Malesuada purus dui facilisi pretium fusce et. Sapien fermentum vitae molestie eget a id amet amet. Feugiat mi euismod arcu nunc ultricies.”
+                        <p class="testimonial_text">        
+                            "Untold Freight Concierge elevates logistics to an art form. From sourcing elusive designer handbags to delivering them with flawless precision, their white-glove service and attention to detail have made every purchase feel like a bespoke experience. Discreet, reliable, and impossible to match."
                         </p>
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <img class="img-circle" src="{{ asset('img/testimonial/1.png') }}" alt="">
+
                         <div class="item_name">
-                            Client Name
+                            Emily Roberts
                         </div>
                         <span class="position">
-                            position
+                            Luxury Retail Collector
                         </span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="shadow-effect">
                         <p>
-                            “Lorem ipsum dolor sit amet consectetur. Faucibus quisque egestas ut ullamcorper facilisi sollicitudin lectus elit diam. Malesuada purus dui facilisi pretium fusce et. Sapien fermentum vitae molestie eget a id amet amet. Feugiat mi euismod arcu nunc ultricies.”
+                            "I rely on Untold Freight Concierge to handle unique and delicate items—especially when fast, secure, and elegant delivery is a must. Their bonded, concierge-style approach ensures every shipment arrives in pristine condition, with zero stress on my end. Truly first-class service."
                         </p>
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <img class="img-circle" src="{{ asset('img/testimonial/2.png') }}" alt="">
                         <div class="item_name">
-                            Client Name
+                            James Carter
                         </div>
                         <span class="position">
-                            position
+                            Gift Curator & Philanthropist
                         </span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="shadow-effect">
                         <p>
-                            “Lorem ipsum dolor sit amet consectetur. Faucibus quisque egestas ut ullamcorper facilisi sollicitudin lectus elit diam. Malesuada purus dui facilisi pretium fusce et. Sapien fermentum vitae molestie eget a id amet amet. Feugiat mi euismod arcu nunc ultricies.”
+                            "From rare jewelry to custom-scented fragrances, Untold Freight Concierge handled it all with unmatched sophistication. Their personal shopper went above and beyond to source limited-edition pieces, and the delivery? Seamless, discreet, and on time. It’s the perfect blend of luxury and assurance."
                         </p>
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <img class="img-circle" src="{{ asset('img/testimonial/3.png') }}" alt="">
                         <div class="item_name">
-                            Client Name
+                            Olivia Bennett
                         </div>
                         <span class="position">
-                            position
+                            Art Enthusiast & Private Collector
                         </span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="shadow-effect">
                         <p>
-                            “Lorem ipsum dolor sit amet consectetur. Faucibus quisque egestas ut ullamcorper facilisi sollicitudin lectus elit diam. Malesuada purus dui facilisi pretium fusce et. Sapien fermentum vitae molestie eget a id amet amet. Feugiat mi euismod arcu nunc ultricies.”
+                            "I never imagined pet shipping could feel this upscale. The team at Untold Freight Concierge delivered my tiny French bulldog with such care and comfort—I felt like they were delivering a VIP passenger, not just a pet. Their trustworthiness and impeccable handling made all the difference."
                         </p>
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <img class="img-circle" src="{{ asset('img/testimonial/4.png') }}" alt="">
                         <div class="item_name">
-                            Client Name
+                            Michael Greene
                         </div>
                         <span class="position">
-                            position
+                            High-End Pet Owner
                         </span>
                     </div>
                 </div>

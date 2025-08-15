@@ -452,8 +452,10 @@ footer ul {
 .owl-carousel .owl-item img {
     transform-style: preserve-3d;
     max-width: 80px;
+    max-height: 80px;
     border-radius: 100%;
     margin: 0 auto 17px;
+    object-fit: cover;
 }
 #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
 #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
@@ -726,7 +728,7 @@ footer ul {
 }
 
 #search {
-    margin-top: 160px;
+    padding-top: 160px;
     margin-bottom: 80px;
 }
 
@@ -819,7 +821,7 @@ footer ul {
 }
 
 #luxury_gateway {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
 }
 
 #luxury_gateway .promise_right {
@@ -854,7 +856,7 @@ footer ul {
 #packaging_options,
 #tailored_for_you,
 #need_custom {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
 }
 
 #custom_packaging_banner {
@@ -1668,7 +1670,7 @@ footer ul {
 }
 
 #search {
-    margin-top: 160px;
+    padding-top: 160px;
     margin-bottom: 80px;
 }
 
@@ -1761,7 +1763,7 @@ footer ul {
 }
 
 #luxury_gateway {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
 }
 
 #luxury_gateway .promise_right {
@@ -1797,7 +1799,7 @@ footer ul {
 #tailored_for_you,
 #need_custom,
 #contact_banner {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
 }
 
 #custom_packaging_banner {
