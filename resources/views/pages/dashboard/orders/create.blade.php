@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceFee = 80.00;
     const luxeFee = 50.00;
 
-    // Создаем элемент для Luxe (сперва скрыт)
     let luxeFeeElem = document.createElement('p');
     luxeFeeElem.id = 'luxeFee';
     luxeFeeElem.textContent = `Luxe: $${luxeFee.toFixed(2)}`;
@@ -204,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
     freeRadio.addEventListener('change', updateFees);
     luxeRadio.addEventListener('change', updateFees);
 
-    // Инициализация при загрузке
     updateFees();
 });
 </script>
