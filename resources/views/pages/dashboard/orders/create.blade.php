@@ -53,6 +53,36 @@
                                 </div>
                             </div>
 
+                            <div class="dashboard_card">
+                                <h3>Packaging method</h3>
+                                <p>The method of packaging selected or re-confirmed here will be considered final.</p>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-check shipping_method_card">
+                                            <input class="form-check-input" type="radio" name="packaging_method" id="free" value="free" required checked>
+                                            <label class="form-check-label d-flex align-items-center" for="free">
+                                                <img src="{{ asset('img/icons/free.png') }}" alt="Free" style="height:64px;vertical-align:middle;margin-right:8px;">
+                                                <p>
+                                                    Free
+                                                </p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-check shipping_method_card">
+                                            <input class="form-check-input" type="radio" name="packaging_method" id="luxe" value="luxe" required>
+                                            <label class="form-check-label d-flex align-items-center" for="luxe">
+                                                <img src="{{ asset('img/icons/luxe.png') }}" alt="Luxe" style="height:64px;vertical-align:middle;margin-right:8px;">
+                                                <p>
+                                                    Luxe $50
+                                                </p>
+                                            </label>
+                                        </div>
+                                        <textarea class="form-control mt-3 border-dark d-none" name="luxe_declaration" id="luxe_declaration" rows="3" placeholder="Luxe declaration"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="dashboard_card mb-0">
                                 <h3>Declaration</h3>
                                 <div class="row">
@@ -116,4 +146,68 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const freeRadio = document.getElementById('free');
+        const luxeRadio = document.getElementById('luxe');
+        const luxeTextarea = document.getElementById('luxe_declaration');
+
+        function toggleLuxeTextarea() {
+            if (luxeRadio.checked) {
+                luxeTextarea.classList.remove('d-none');
+            } else {
+                luxeTextarea.classList.add('d-none');
+            }
+        }
+
+        freeRadio.addEventListener('change', toggleLuxeTextarea);
+        luxeRadio.addEventListener('change', toggleLuxeTextarea);
+
+        toggleLuxeTextarea();
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const freeRadio = document.getElementById('free');
+    const luxeRadio = document.getElementById('luxe');
+    const luxeTextarea = document.getElementById('luxe_declaration');
+
+    const declarationFeeContainer = document.getElementById('declarationFee').parentElement;
+    const totalPriceElem = document.getElementById('totalPrice');
+
+    const baseDeclaration = 50.00;
+    const serviceFee = 80.00;
+    const luxeFee = 50.00;
+
+    // Создаем элемент для Luxe (сперва скрыт)
+    let luxeFeeElem = document.createElement('p');
+    luxeFeeElem.id = 'luxeFee';
+    luxeFeeElem.textContent = `Luxe: $${luxeFee.toFixed(2)}`;
+    luxeFeeElem.style.display = 'none';
+    declarationFeeContainer.parentElement.insertBefore(luxeFeeElem, declarationFeeContainer.parentElement.children[1]);
+
+    function updateFees() {
+        if (luxeRadio.checked) {
+            luxeTextarea.classList.remove('d-none');
+            luxeFeeElem.style.display = 'block';
+        } else {
+            luxeTextarea.classList.add('d-none');
+            luxeFeeElem.style.display = 'none';
+        }
+
+        const total = baseDeclaration + (luxeRadio.checked ? luxeFee : 0) + serviceFee;
+        totalPriceElem.textContent = total.toFixed(2);
+    }
+
+    freeRadio.addEventListener('change', updateFees);
+    luxeRadio.addEventListener('change', updateFees);
+
+    // Инициализация при загрузке
+    updateFees();
+});
+</script>
+
+
 @endsection
