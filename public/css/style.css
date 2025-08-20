@@ -2440,6 +2440,7 @@ footer ul {
 #shop_slider .owl-carousel .owl-item img {
     width: 100%;
     max-width: 320px;
+    max-height: 320px;
     margin: 0 auto;
     border-radius: unset;
 }

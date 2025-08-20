@@ -70,15 +70,15 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-check shipping_method_card">
-                                            <input class="form-check-input" type="radio" name="packaging_method" id="luxe" value="luxe" required>
-                                            <label class="form-check-label d-flex align-items-center" for="luxe">
-                                                <img src="{{ asset('img/icons/luxe.png') }}" alt="Luxe" style="height:64px;vertical-align:middle;margin-right:8px;">
+                                            <input class="form-check-input" type="radio" name="packaging_method" id="custom" value="custom" required>
+                                            <label class="form-check-label d-flex align-items-center" for="custom">
+                                                <img src="{{ asset('img/icons/luxe.png') }}" alt="Custom" style="height:64px;vertical-align:middle;margin-right:8px;">
                                                 <p>
-                                                    Luxe $50
+                                                    Custom packaging $50
                                                 </p>
                                             </label>
                                         </div>
-                                        <textarea class="form-control mt-3 border-dark d-none" name="luxe_declaration" id="luxe_declaration" rows="3" placeholder="Luxe declaration"></textarea>
+                                        <textarea class="form-control mt-3 border-dark d-none" name="custom_declaration" id="custom_declaration" rows="3" placeholder="Custom declaration"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -112,6 +112,12 @@
                         <div class="col-lg-6 position-relative">
                             <div class="total_price">
                                 <div class="d-flex gap-3">
+                                    <section id="custom_packaging" class="d-none">
+                                        <h3>Custom packaging</h3>
+                                        <p>
+                                            $<span id="customFee">50.00</span>
+                                        </p>
+                                    </section>
                                     <section>
                                         <h3>Declaration fee</h3>
                                         <p>
@@ -150,58 +156,51 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const freeRadio = document.getElementById('free');
-        const luxeRadio = document.getElementById('luxe');
-        const luxeTextarea = document.getElementById('luxe_declaration');
+        const customRadio = document.getElementById('custom');
+        const customTextarea = document.getElementById('custom_declaration');
 
-        function toggleLuxeTextarea() {
-            if (luxeRadio.checked) {
-                luxeTextarea.classList.remove('d-none');
+        function toggleCustomTextarea() {
+            if (customRadio.checked) {
+                customTextarea.classList.remove('d-none');
             } else {
-                luxeTextarea.classList.add('d-none');
+                customTextarea.classList.add('d-none');
             }
         }
 
-        freeRadio.addEventListener('change', toggleLuxeTextarea);
-        luxeRadio.addEventListener('change', toggleLuxeTextarea);
+        freeRadio.addEventListener('change', toggleCustomTextarea);
+        customRadio.addEventListener('change', toggleCustomTextarea);
 
-        toggleLuxeTextarea();
+        toggleCustomTextarea();
     });
 </script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const freeRadio = document.getElementById('free');
-    const luxeRadio = document.getElementById('luxe');
-    const luxeTextarea = document.getElementById('luxe_declaration');
-
-    const declarationFeeContainer = document.getElementById('declarationFee').parentElement;
+    const customRadio = document.getElementById('custom');
+    const customTextarea = document.getElementById('custom_declaration');
+    const customPackagingSection = document.getElementById('custom_packaging');
     const totalPriceElem = document.getElementById('totalPrice');
 
     const baseDeclaration = 50.00;
     const serviceFee = 80.00;
-    const luxeFee = 50.00;
-
-    let luxeFeeElem = document.createElement('p');
-    luxeFeeElem.id = 'luxeFee';
-    luxeFeeElem.textContent = `Luxe: $${luxeFee.toFixed(2)}`;
-    luxeFeeElem.style.display = 'none';
-    declarationFeeContainer.parentElement.insertBefore(luxeFeeElem, declarationFeeContainer.parentElement.children[1]);
+    const customFee = 50.00;
 
     function updateFees() {
-        if (luxeRadio.checked) {
-            luxeTextarea.classList.remove('d-none');
-            luxeFeeElem.style.display = 'block';
+        if (customRadio.checked) {
+            customTextarea.classList.remove('d-none');
+            customPackagingSection.classList.remove('d-none');
         } else {
-            luxeTextarea.classList.add('d-none');
-            luxeFeeElem.style.display = 'none';
+            customTextarea.classList.add('d-none');
+            customPackagingSection.classList.add('d-none');
         }
 
-        const total = baseDeclaration + (luxeRadio.checked ? luxeFee : 0) + serviceFee;
+        const total = baseDeclaration + serviceFee + (customRadio.checked ? customFee : 0);
         totalPriceElem.textContent = total.toFixed(2);
     }
 
     freeRadio.addEventListener('change', updateFees);
-    luxeRadio.addEventListener('change', updateFees);
+    customRadio.addEventListener('change', updateFees);
 
     updateFees();
 });

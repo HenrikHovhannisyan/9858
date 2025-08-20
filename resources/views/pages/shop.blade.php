@@ -2,7 +2,7 @@
 @section('title') - Shop @endsection
 
 @section('content')
-<div id="bgPrivacyPolicy">
+<div>
     <!-- Start Serach -->
     <section id="search">
         <div class="container">
